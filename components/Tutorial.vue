@@ -51,10 +51,11 @@
         </svg>
       </a>
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-        <h2 class="text-2xl leading-7 font-semibold">
+        <h2 class="text-2xl leading-7 font-semibold awaw">
           Welcome to your Nuxt Application
           <router-link to="/join">조인홈</router-link>
           <router-link to="/join/welcome">조인-조인완료</router-link>
+          <p>testsss 111 222 333 44 55</p>
         </h2>
         <p class="mt-3 text-gray-600">
           We recommend you take a look at the
