@@ -1,6 +1,24 @@
 // scss-lint:disable all
 // Core Admin Variables
 
+
+// Color system
+
+$white:                           #fff;
+$gray-100:                        #f0f3f5;
+$gray-200:                        #c2cfd6;
+$gray-300:                        #a4b7c1;
+$gray-400:                        #869fac;
+$gray-500:                        #678898;
+$gray-600:                        #536c79;
+$gray-700:                        #3e515b;
+$gray-800:                        #29363d;
+$gray-900:                        #151b1e;
+$black:                           #000 !default;
+
+$body-color:                        #ccc;
+
+
 $enable-sidebar-nav-rounded:          false !default;
 
 $border-color:                        $gray-200 !default;
@@ -34,6 +52,7 @@ $spotify:                             #7ab800 !default;
 $vine:                                #00bf8f !default;
 $foursquare:                          #1073af !default;
 $vimeo:                               #aad450 !default;
+
 
 // Navbar
 
