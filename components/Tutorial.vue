@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <div
-    class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
+    class="app-container relative flex items-top justify-center min-h-s creen bg-gray-100 sm:items-center sm:pt-0"
   >
   <MainHeader/>
     <link
@@ -116,17 +116,20 @@
         ></a>
       </div>
     </div>
+
+    <BottomNavigator/>>
   </div>
 </template>
 
 <script>
 import MainHeader from '../components/Header/MainHeader.vue';
+import BottomNavigator from '../components/bottomNavigator.vue';
 
 export default {
     name: "NuxtTutorial",
-    components: { MainHeader },
-    data() {
-      return {};
-    }
+    components: { MainHeader, BottomNavigator },
+    // data() {
+    //   return {};
+    // }
 };
 </script>

@@ -18,7 +18,7 @@ export default {
     components: { 
         ButtonIcon
     },
-    // data: {
+    // data() {
         
     // },
     // methods: {
@@ -33,6 +33,7 @@ export default {
         left: 0;
         top: 0;
         width: 100%;
+        height: 50px;
         background: #ffffff;
 
         .inner {
@@ -40,7 +41,8 @@ export default {
             align-items: center;
             position: relative;
             width: 100%;
-            padding: 10px 16px;
+            height: 100%;
+            padding: 0 16px;
         }
         .button-container {
             display: flex;
