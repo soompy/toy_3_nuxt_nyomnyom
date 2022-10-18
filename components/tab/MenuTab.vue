@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="scroll-x-tab-wrap">
-            <ul class="scroll-x-tab">
+        <div class="scroll_x_tab_wrap">
+            <ul class="scroll_x_tab">
                 <li class="active"><span>m1</span></li>
                 <li><span>m2</span></li>
                 <li><span>mm1</span></li>
@@ -13,7 +13,7 @@
                 <li><span>m1</span></li>
                 <li><span>m2</span></li>
             </ul>
-            <div class="tab-underBar"></div>
+            <div class="tab_underBar"></div>
         </div>
     </div>
 </template>
@@ -27,11 +27,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.scroll-x-tab-wrap {
+.scroll_x_tab_wrap {
     overflow: hidden;
     position: relative;
     width: 100%;
-    .scroll-x-tab {
+    .scroll_x_tab {
         overflow-x: auto;
         display: flex;
         align-items: center;
@@ -52,7 +52,7 @@ export default {
             display: none;
         }
     }
-    .tab-underBar {
+    .tab_underBar {
         position: relative;
         width: 10%;
         height: 2px;

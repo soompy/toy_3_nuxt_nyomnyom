@@ -2,7 +2,7 @@
     <header id="header">
         <div class="inner">
             <h1 class="logo"><a href="">logo</a></h1>            
-            <div class="button-container">
+            <div class="button_container">
                 <ButtonIcon class="icon ic_search black"/>
                 <ButtonIcon class="icon ic_share grey"/>                
             </div>
@@ -18,12 +18,6 @@ export default {
     components: { 
         ButtonIcon
     },
-    // data() {
-        
-    // },
-    // methods: {
-        
-    // },
 };
 </script>
 
@@ -44,7 +38,7 @@ export default {
             height: 100%;
             padding: 0 16px;
         }
-        .button-container {
+        .button_container {
             display: flex;
             align-content: center;
             justify-content: center;

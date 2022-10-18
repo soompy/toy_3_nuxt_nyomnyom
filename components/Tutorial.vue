@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <div
-    class="app-container relative flex items-top min-h-s creen bg-gray-100 sm:items-center sm:pt-0"
+    class="app-container"
   >
     <MainHeader />
 
@@ -11,7 +11,9 @@
       rel="stylesheet"
     />
 
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8" style="display: none;">
+    <router-link to="/mypage/pageNotice">공지사항</router-link>
+
+    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8" style="display: none">
       <a
         class="flex justify-center pt-8 sm:pt-0"
         href="https://nuxtjs.org"
