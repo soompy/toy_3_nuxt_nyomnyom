@@ -1,15 +1,17 @@
 <!-- Please remove this file from your project -->
 <template>
   <div
-    class="app-container relative flex items-top justify-center min-h-s creen bg-gray-100 sm:items-center sm:pt-0"
+    class="app-container relative flex items-top min-h-s creen bg-gray-100 sm:items-center sm:pt-0"
   >
-  <MainHeader/>
+    <MainHeader />
+
+    <MenuTab />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
+
+    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8" style="display: none;">
       <a
         class="flex justify-center pt-8 sm:pt-0"
         href="https://nuxtjs.org"
@@ -117,19 +119,20 @@
       </div>
     </div>
 
-    <BottomNavigator/>>
+    <BottomNavigator />
   </div>
 </template>
 
 <script>
-import MainHeader from '../components/Header/MainHeader.vue';
-import BottomNavigator from '../components/bottomNavigator.vue';
+import MainHeader from "../components/Header/MainHeader.vue";
+import BottomNavigator from "../components/bottomNavigator.vue";
+import MenuTab from "../components/tab/MenuTab.vue";
 
 export default {
-    name: "NuxtTutorial",
-    components: { MainHeader, BottomNavigator },
-    // data() {
-    //   return {};
-    // }
+  name: "NuxtTutorial",
+  components: { MainHeader, BottomNavigator, MenuTab },
+  // data() {
+  //   return {};
+  // }
 };
 </script>

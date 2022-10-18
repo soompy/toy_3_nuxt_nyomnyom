@@ -1,5 +1,7 @@
 .app-container {
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     position: relative;
     top: 50px;
     width: 100%;
