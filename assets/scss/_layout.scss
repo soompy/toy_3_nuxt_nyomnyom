@@ -8,6 +8,12 @@
     height: calc(100vh - 100px);
 }
 
+.app-contents-wrap {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+}
+
 img, i {
     display: block;
     width: 100%;

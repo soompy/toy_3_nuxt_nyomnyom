@@ -1,16 +1,16 @@
 <template>
   <div class="app-container">
-    <PageHead />
+    <PageHeader />
     
   </div>
 </template>
 
 <script>
-import PageHead from "../../components/Header/MainHeader.vue";
+import PageHeader from "../../components/Header/MainHeader.vue";
 
 export default {
   name: "PageNotice",
-  components: { PageHead },
+  components: { PageHeader },
 };
 </script>
 
