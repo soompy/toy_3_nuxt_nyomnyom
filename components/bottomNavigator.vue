@@ -1,77 +1,77 @@
 <template>
-    <div class="navigator-container">
-        <ul class="navigator">
-            <li>
-                <a href="">
-                    <i class="icon"></i>
-                    <p>홈</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="icon"></i>
-                    <p>홈</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="icon"></i>
-                    <p>홈</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="icon"></i>
-                    <p>마이페이지</p>
-                </a>
-            </li>
-        </ul>
-    </div>
+  <div class="navigator-container">
+    <ul class="navigator">
+      <li>
+        <a href="">
+          <i class="icon ic_home black"></i>
+          <p>홈</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="icon ic_chat black"></i>
+          <p>커뮤니티</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="icon ic_shop black"></i>
+          <p>스토어</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="icon ic_my black"></i>
+          <p>마이페이지</p>
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "BottomNavigator",
-    
+  name: "BottomNavigator",
 };
 </script>
 
 <style lang="scss" scoped>
 .navigator-container {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  border-top: 1px solid #eeeeee;
+  .navigator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
     width: 100%;
-    height: 50px;
-    background: #ffffff;
-    .navigator {
+    height: 100%;
+    li {
+      flex: 1;
+      height: 100%;
+      a {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        position: relative;
+        justify-content: center;
+        flex-direction: column;
         width: 100%;
         height: 100%;
-        li {
-            flex: 1;
-            height: 100%;
-            a {                
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                width: 100%;
-                height: 100%;
-                padding: 0 4px;
-                .icon {
-                    width: 20px;
-                    height: 20px;
-                }
-                p {
-                    font-size: 12px;
-                    margin-top: 2px;
-                }
-            }
+        padding: 0 4px;
+        .icon {
+          width: 20px;
+          height: 20px;
         }
+        p {
+          font-size: 12px;
+          margin-top: 2px;
+        }
+      }
     }
+  }
 }
 </style>

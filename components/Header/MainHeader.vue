@@ -3,7 +3,7 @@
         <div class="inner">
             <h1 class="logo"><a href="">logo</a></h1>            
             <div class="button_container">
-                <ButtonIcon class="icon ic_search black"/>
+                <router-link to="/search/searchPage"><ButtonIcon class="icon ic_search black"/></router-link>                
                 <ButtonIcon class="icon ic_share grey"/>                
             </div>
         </div>
