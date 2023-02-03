@@ -1,18 +1,18 @@
 <template>
-    <button class="button_prev">
-        <i class="icon ic_prev black"></i>
-    </button>
+  <button class="button_prev">
+    <i class="icon ic_prev black"></i>
+  </button>
 </template>
 
 <script>
 export default {
-    name: "ButtonPrev",
+  name: "ButtonPrev",
 };
 </script>
 
 <style lang="scss" scoped>
 .button_prev {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 </style>

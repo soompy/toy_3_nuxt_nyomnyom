@@ -1,0 +1,58 @@
+@import "responsive";
+
+
+.search_area {
+    position: relative;
+
+    .input_field {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: vw(40);
+        border: vw(1) solid #ccc;
+        padding: 0 vw(10);
+
+        .ic_search {
+            flex-shrink: 0;
+            width: vw(24);
+            height: vw(24);
+        }
+
+        .search_field {
+            position: relative;
+            min-width: calc(100% + vw(14));        
+            height: 100%;
+            font-size: vw(14);
+            transform: scale(0.86);
+            margin-left: vw(-16);
+        }
+    }
+
+    .api_atcmp_wrap {
+        position: relative;
+        border-bottom: vw(1) solid #cccccc;
+        .kwd_lst {
+            position: relative;
+            padding: vw(6) 0;
+            .item {
+                display: flex;
+                align-items: center;
+                padding: vw(2) vw(10);  
+                font-size: vw(14);
+                border-radius: vw(6);
+                .kwd {
+                    .fix {
+
+                    }
+                    .common_ico_kwd {
+
+                    }
+                }  
+                &.on {
+                    background: #cccccc;
+                }              
+            }
+        }        
+    }
+}

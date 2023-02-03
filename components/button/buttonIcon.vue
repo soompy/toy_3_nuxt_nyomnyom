@@ -5,8 +5,10 @@
 <script>
 export default {
     name: "ButtonIcon",
-    data: {
-
+    data() {
+        return {
+            
+        }
     },
     methods: {
 
