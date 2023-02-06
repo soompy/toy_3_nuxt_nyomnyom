@@ -1,5 +1,5 @@
 <template>
-  <button class="button_prev">
+  <button class="button_prev" @click="goBack">
     <i class="icon ic_prev black"></i>
   </button>
 </template>
@@ -7,6 +7,11 @@
 <script>
 export default {
   name: "ButtonPrev",
+  methods: {
+    goBack() {
+      this.$router.go(-1)
+    }
+  }
 };
 </script>
 
