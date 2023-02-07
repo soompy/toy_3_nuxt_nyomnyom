@@ -2,28 +2,28 @@
   <div class="navigator-container">
     <ul class="navigator">
       <li>
-        <a href="">
+        <router-link to="/">
           <i class="icon ic_home black"></i>
           <p>홈</p>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="">
+        <router-link to="/">
           <i class="icon ic_chat black"></i>
           <p>커뮤니티</p>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="">
+        <router-link to="/">
           <i class="icon ic_shop black"></i>
           <p>스토어</p>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="">
+        <router-link to="/page/pageMypage">
           <i class="icon ic_my black"></i>
           <p>마이페이지</p>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -44,6 +44,7 @@ export default {
   height: 50px;
   background: #ffffff;
   border-top: 1px solid #eeeeee;
+
   .navigator {
     display: flex;
     align-items: center;
@@ -51,9 +52,11 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
+
     li {
       flex: 1;
       height: 100%;
+
       a {
         display: flex;
         align-items: center;
@@ -62,10 +65,12 @@ export default {
         width: 100%;
         height: 100%;
         padding: 0 4px;
+
         .icon {
           width: 20px;
           height: 20px;
         }
+
         p {
           font-size: 12px;
           margin-top: 2px;

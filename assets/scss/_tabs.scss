@@ -1,0 +1,33 @@
+@import "responsive";
+
+.tabs {
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    border-bottom: vw(1) solid #cccccc;
+
+    ul {
+        display: flex;
+        align-content: center;
+        width: 100%;
+
+        li {
+            flex: 1;
+            min-width: calc(100% / 3);
+            font-size: vw(14);
+            padding: vw(10);
+            text-align: center;
+
+            &.active {
+                border-bottom: 1px solid #000;
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.tab-content {
+    padding: vw(20);
+}
