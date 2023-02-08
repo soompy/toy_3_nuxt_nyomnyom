@@ -2,9 +2,16 @@
 <template>
   <div class="app-container">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- 슬라이더 -->
+
     <MainHeader />
 
     <Tab />
+
+    <post-list-card></post-list-card>
+    
+    <edu-list></edu-list>
 
 
 
@@ -83,11 +90,13 @@
 <script>
 import MainHeader from "../components/Header/MainHeader.vue";
 import BottomNavigator from "../components/bottomNavigator.vue";
-import Tab from "../components/tab/Tab.vue"
+import Tab from "../components/tab/Tab.vue";
+import PostListCard from './widgets/card/PostListCard.vue';
+import EduList from './widgets/list/eduList.vue';
 
 export default {
   name: "NuxtTutorial",
-  components: { MainHeader, BottomNavigator, Tab },
+  components: { MainHeader, BottomNavigator, Tab, PostListCard, EduList },
   data() {
     return {
 
