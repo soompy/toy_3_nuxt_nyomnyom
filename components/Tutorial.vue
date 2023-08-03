@@ -11,7 +11,9 @@
 
     <post-list-card></post-list-card>
     
-    <edu-list></edu-list>
+    <div class="">
+      <edu-list v-model="eduInfo"></edu-list>
+    </div>    
 
 
 
@@ -99,8 +101,8 @@ export default {
   components: { MainHeader, BottomNavigator, Tab, PostListCard, EduList },
   data() {
     return {
-
+      eduInfo: "",
     };
-  },
+  },  
 };
 </script>

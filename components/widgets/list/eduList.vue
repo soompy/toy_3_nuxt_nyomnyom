@@ -6,8 +6,8 @@
                     <img src="" alt="">
                 </span>
                 <div class="edu-box">
-                    <h3 class="edu-title">{{ eduList.title }}</h3>
-                    <p class="edu-text">{{ eduList.text }}</p>
+                    <h3 class="edu-title">{{ title }}</h3>
+                    <p class="edu-text">{{ text }}</p>
                 </div>
             </li>
         </ul>
@@ -18,15 +18,17 @@
 export default {
     name: "EduList",
     props: {
-        eduList: {
-            type: Object,
-            default: () => {
-                return {
-                    title: "",
-                    text: "",
-                };
-            },            
-        },
+        // eduList: {
+        //     type: Object,
+        //     default: () => {
+        //         return {
+        //             title: "",
+        //             text: "",
+        //         };
+        //     },            
+        // },
+        title: Object,
+        text: Object,
     },
 };
 </script>
