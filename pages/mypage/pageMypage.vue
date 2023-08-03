@@ -1,7 +1,5 @@
 <template>
-    <div>
-        adkfjdk
-    </div>
+  <div>adkfjdk</div>
 </template>
 
 <script>

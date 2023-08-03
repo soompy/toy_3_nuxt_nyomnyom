@@ -833,7 +833,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-input[type='text'], input[type='search'] {
+input[type='text'], input[type='search'], input[type='password'] {
   -webkit-appearance: none;
   outline: none;
   font-size: 16px;  
@@ -842,6 +842,8 @@ input[type='text'], input[type='search'] {
     color: #BBC2C9;
   }
   &:focus {   
+    outline: none;
+
       &::-webkit-search-cancel-button {
         display: block;
         pointer-events: all;
@@ -858,12 +860,20 @@ input[type='text'], input[type='search'] {
     pointer-events: none;
   }
 }
-button {
+
+button{
+  outline: none;
   padding: 0;
   cursor: pointer;
   border: none;
   font-size: 16px;
+  
+  &:focus {
+    outline: none;
+    border: none;
+  }
 }
+
 * {
   box-sizing: border-box;
 }

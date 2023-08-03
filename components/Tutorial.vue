@@ -95,10 +95,11 @@ import BottomNavigator from "../components/bottomNavigator.vue";
 import Tab from "../components/tab/Tab.vue";
 import PostListCard from './widgets/card/PostListCard.vue';
 import EduList from './widgets/list/eduList.vue';
+import Login from './widgets/form/LoginForm.vue'
 
 export default {
   name: "NuxtTutorial",
-  components: { MainHeader, BottomNavigator, Tab, PostListCard, EduList },
+  components: { MainHeader, BottomNavigator, Tab, PostListCard, EduList, Login },
   data() {
     return {
       eduInfo: "",
