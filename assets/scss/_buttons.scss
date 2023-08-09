@@ -5,6 +5,14 @@
         background: $color-grey;
     }
 
+    &.confirm {
+        background: $secondary-color;
+    }
+
+    &.cancel {
+        background: $color-grey;
+    }
+
     &.primary {
 
         &.active {

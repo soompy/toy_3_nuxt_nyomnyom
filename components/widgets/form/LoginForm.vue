@@ -1,29 +1,42 @@
 <template>
-  <form class="login-form" @submit.prevent="login">
-    <div class="form-box">
-      <label for="username">Username:</label>
-      <input type="text" id="username" v-model="username" required />
-    </div>
+  <div class="container">
+    <form class="login-form" @submit.prevent="login">
+      <div class="form-box">
+        <label for="username">Username:</label>
+        <input type="text" id="username" v-model="username" required />
+      </div>
 
-    <div class="form-box">
-      <label for="password">Password:</label>
-      <input type="password" id="password" v-model="password" required />
-    </div>    
-    <Button
-      class="btn login primary mt-16"      
-      :class="{ 'active': isButtonEnabled }"
-      label="Login"
-      :width="'full'"
-      :height="50"            
-      textColor="white"
-      :is-enabled="isButtonEnabled"
-      @click="handleButtonClick"
-    />
-  </form>
+      <div class="form-box mt-4">
+        <label for="password">Password:</label>
+        <input type="password" id="password" v-model="password" required />
+      </div>    
+
+      <Button
+        class="btn login primary mt-16"      
+        :class="{ 'active': isButtonEnabled }"
+        label="Login"
+        :width="'full'"
+        :height="50"            
+        textColor="white"
+        :is-enabled="isButtonEnabled"
+        @click="handleButtonClick"
+      />
+    </form>
+
+    <Modal v-if="showModal" @close="hideLoginConfirmationModal">
+      <div>
+        <h2>Login Confirmation</h2>
+        <p>Are you sure you want to log in as {{ username }}?</p>
+        <button class="btn confirm" @click="performLogin">뇸뇸</button>
+        <button class="btn cancel" @click="hideLoginConfirmationModal">취소</button>
+      </div>
+    </Modal>
+  </div>  
 </template>
 
 <script>
 import Button from "../../button/Button";
+import Modal from '../../Modal.vue';
 
 export default {
   name: "LoginForm",
@@ -33,10 +46,12 @@ export default {
       username: "",
       password: "",
       isButtonEnabled: false,
+      showModal: false,
     };
   },
   components: {
     Button,
+    Modal,
   },
   watch: {
     username(value) {
@@ -52,9 +67,21 @@ export default {
     },
     handleButtonClick() {
       console.log("Button Clicked!");
+      this.showModal = true;
     },
     updateButtonState() {
       this.isButtonEnabled = this.username !== "" && this.password !== "";
+    },
+    showLoginConfirmationModal() {
+      this.showModal = true;
+    },
+    hideLoginConfirmationModal() {
+      this.showModal = false;
+    },
+    performLogin() {
+      console.log("Logged in:", this.username);
+      this.showModal = false;
+      this.$router.push("/");
     },
   },
 };
@@ -62,6 +89,9 @@ export default {
 
 
 <style lang="scss" scoped>
+.container {
+  width: 100%;
+}
 .login-form {
   display: flex;
   align-items: center;
