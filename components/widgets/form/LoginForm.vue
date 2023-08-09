@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <form class="login-form" @submit.prevent="login">
+  <form class="login-form" @submit.prevent="login">
       <div class="form-box">
         <label for="username">Username:</label>
         <input type="text" id="username" v-model="username" required />
@@ -11,16 +10,15 @@
         <input type="password" id="password" v-model="password" required />
       </div>
       <Button
-        label="Login"
-        :width="120"
-        :height="50"
-        backgroundColor="blue"
+        class="btn primary mt-16"
+        label="Login"     
+        :width="'full'"
+        :height="50"              
         textColor="white"
         :is-enabled="isButtonEnabled"
         @click="handleButtonClick"
       />
-    </form>
-  </div>
+  </form>
 </template>
 
 <script>
@@ -53,13 +51,17 @@ export default {
 <style lang="scss" scoped>
 .login-form {
   display: flex;
-  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
   padding: 20px;
 
   .form-box {
     display: flex;
     align-content: center;
     flex-direction: column;
+    width: 100%;
     border-bottom: 1px solid #ccc;
 
     label {

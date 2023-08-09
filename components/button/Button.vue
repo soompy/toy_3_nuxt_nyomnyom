@@ -1,7 +1,7 @@
 <template>
   <button
     :style="{
-      width: width + 'px',
+      width: width === 'full' ? '100%' : width + 'px',
       height: height + 'px',
       backgroundColor: backgroundColor,
       color: textColor,
@@ -19,20 +19,17 @@ export default {
   props: {
     label: String,
     width: {
-      type: Number,
-      default: 100,
+      type: Number,      
     },
     height: {
       type: Number,
       default: 40,
     },
     backgroundColor: {
-      type: String,
-      default: 'white',
+      type: String,      
     },
     textColor: {
-      type: String,
-      default: 'black',
+      type: String,      
     },
     isEnabled: {
       type: Boolean,
@@ -48,11 +45,3 @@ export default {
   },
 };
 </script>
-  
-<style scoped>
-  button {
-    border: none;
-    cursor: pointer;
-  }
-</style>
-  
