@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page_head">
-      <ButtonPrev />
+      
       <p class="title">
         {{ pageHeaderTitle }}
       </p>
@@ -10,12 +10,11 @@
 </template>
 
 <script>
-import ButtonPrev from "../../components/button/buttonPrev.vue";
 
 export default {
   name: "PageHeader",
   components: {
-    ButtonPrev,
+
   },
   props: {
     pageHeaderTitle: {

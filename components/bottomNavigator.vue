@@ -20,11 +20,11 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/page/pageMypage">
+        <router-link to="/mypage/pageMypage">
           <i class="icon ic_my black"></i>
           <p>마이페이지</p>
         </router-link>
-      </li>
+      </li>      
     </ul>
   </div>
 </template>

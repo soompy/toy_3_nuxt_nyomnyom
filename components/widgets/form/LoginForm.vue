@@ -1,38 +1,55 @@
 <template>
-    <div>
-      <form class="login-form" @submit.prevent="login">
-        <div class="form-box">
-          <label for="username">Username:</label>
-          <input type="text" id="username" v-model="username" required>
-        </div>        
-        
-        <div class="form-box">
-          <label for="password">Password:</label>
-          <input type="password" id="password" v-model="password" required> 
-        </div>              
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  </template>
-  
-<script>
-  export default {
-    name: "LoginForm",
+  <div>
+    <form class="login-form" @submit.prevent="login">
+      <div class="form-box">
+        <label for="username">Username:</label>
+        <input type="text" id="username" v-model="username" required />
+      </div>
 
-    data() {
-      return {
-        username: '',
-        password: ''
-      };
+      <div class="form-box">
+        <label for="password">Password:</label>
+        <input type="password" id="password" v-model="password" required />
+      </div>
+      <Button
+        label="Login"
+        :width="120"
+        :height="50"
+        backgroundColor="blue"
+        textColor="white"
+        :is-enabled="isButtonEnabled"
+        @click="handleButtonClick"
+      />
+    </form>
+  </div>
+</template>
+
+<script>
+import Button from "../../button/Button";
+
+export default {
+  name: "LoginForm",
+
+  data() {
+    return {
+      username: "",
+      password: "",
+      isButtonEnabled: true,
+    };
+  },
+  components: {
+    Button,
+  },
+  methods: {
+    login() {
+      console.log("Logging in with:", this.username, this.password);
     },
-    methods: {
-      login() {        
-        console.log('Logging in with:', this.username, this.password);
-      }
-    },
-  };
+    handleButtonClick() {
+      console.log('Button Clicked!');
+    },    
+  },
+};
 </script>
-  
+
 <style lang="scss" scoped>
 .login-form {
   display: flex;
@@ -44,15 +61,15 @@
     align-content: center;
     flex-direction: column;
     border-bottom: 1px solid #ccc;
-    
+
     label {
       font-size: 12px;
       margin-bottom: 8px;
     }
 
     input {
-      position: relative;          
-    }    
+      position: relative;
+    }
   }
 }
 </style>

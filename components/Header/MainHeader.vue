@@ -6,21 +6,20 @@
       </h1>
       <div class="button_container">
         <router-link to="/search/searchPage"
-          ><ButtonIcon class="icon ic_search black"
-        /></router-link>
-        <ButtonIcon class="icon ic_share grey" />
+          ></router-link>
+        
       </div>
     </div>
   </header>
 </template>
 
 <script>
-import ButtonIcon from "../button/buttonIcon.vue";
+
 
 export default {
   name: "MainHeader",
   components: {
-    ButtonIcon,
+    
   },
 };
 </script>
