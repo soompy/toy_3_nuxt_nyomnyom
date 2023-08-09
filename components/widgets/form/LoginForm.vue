@@ -1,23 +1,24 @@
 <template>
   <form class="login-form" @submit.prevent="login">
-      <div class="form-box">
-        <label for="username">Username:</label>
-        <input type="text" id="username" v-model="username" required />
-      </div>
+    <div class="form-box">
+      <label for="username">Username:</label>
+      <input type="text" id="username" v-model="username" required />
+    </div>
 
-      <div class="form-box">
-        <label for="password">Password:</label>
-        <input type="password" id="password" v-model="password" required />
-      </div>
-      <Button
-        class="btn primary mt-16"
-        label="Login"     
-        :width="'full'"
-        :height="50"              
-        textColor="white"
-        :is-enabled="isButtonEnabled"
-        @click="handleButtonClick"
-      />
+    <div class="form-box">
+      <label for="password">Password:</label>
+      <input type="password" id="password" v-model="password" required />
+    </div>    
+    <Button
+      class="btn login primary mt-16"      
+      :class="{ 'active': isButtonEnabled }"
+      label="Login"
+      :width="'full'"
+      :height="50"            
+      textColor="white"
+      :is-enabled="isButtonEnabled"
+      @click="handleButtonClick"
+    />
   </form>
 </template>
 
@@ -31,22 +32,34 @@ export default {
     return {
       username: "",
       password: "",
-      isButtonEnabled: true,
+      isButtonEnabled: false,
     };
   },
   components: {
     Button,
+  },
+  watch: {
+    username(value) {
+      this.updateButtonState();
+    },
+    password(value) {
+      this.updateButtonState();
+    },
   },
   methods: {
     login() {
       console.log("Logging in with:", this.username, this.password);
     },
     handleButtonClick() {
-      console.log('Button Clicked!');
-    },    
+      console.log("Button Clicked!");
+    },
+    updateButtonState() {
+      this.isButtonEnabled = this.username !== "" && this.password !== "";
+    },
   },
 };
 </script>
+
 
 <style lang="scss" scoped>
 .login-form {
