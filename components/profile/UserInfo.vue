@@ -19,6 +19,9 @@ export default {
 
 <style lang="scss" scoped>
 .user-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   font-size: 16px;
 
   p {
