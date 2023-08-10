@@ -1,12 +1,9 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="app-container">
+  <div class="app-container">    
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet" />
 
     <!-- 슬라이더 -->
-
-    <MainHeader />
-
     <Tab />
 
     <post-list-card></post-list-card>
@@ -88,12 +85,11 @@
       <router-link to="/login/loginPage">로그인</router-link>
       <router-link to="/community/mainCommunity">커뮤니티</router-link>
       <router-link to="/join/join">조인</router-link>
-      <router-link to="/">마이페이지</router-link>
+      <router-link to="/mypage/pageMypage">마이페이지</router-link>
       <router-link to="/">검색</router-link>
       <router-link to="/">스토어</router-link>
       <router-link to="/">위젯</router-link>
-      <router-link to="/">대시보드</router-link>
-      
+      <router-link to="/">대시보드</router-link>      
     </div>
 
     <BottomNavigator />
@@ -101,7 +97,6 @@
 </template>
 
 <script>
-import MainHeader from "../components/Header/MainHeader.vue";
 import BottomNavigator from "../components/bottomNavigator.vue";
 import Tab from "../components/tab/Tab.vue";
 import PostListCard from './widgets/card/PostListCard.vue';
@@ -110,10 +105,11 @@ import Login from './widgets/form/LoginForm.vue'
 
 export default {
   name: "NuxtTutorial",
-  components: { MainHeader, BottomNavigator, Tab, PostListCard, EduList, Login },
+  components: { BottomNavigator, Tab, PostListCard, EduList, Login },
   data() {
     return {
       eduInfo: "",
+      pageTitle: "특정 페이지 타이틀",
     };
   },  
 };
