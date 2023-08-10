@@ -1,25 +1,23 @@
 <template>
-    <div>
-        <PageHeader :pageHeaderTitle="pageTitle" /> 
-        <nuxt />
-    </div>
+  <div>
+    <PageHeader :pageHeaderTitle="pageTitle" />
+    <nuxt />
+  </div>
 </template>
 
 <script>
-import PageHeader from '../components/Header/PageHeader.vue'
+import PageHeader from "../components/Header/PageHeader.vue";
 
 export default {
-    components: {
-        PageHeader,
-    },
-    data() {
-        return {
-            pageTitle: "",
-        };
-    },  
-}
+  components: {
+    PageHeader,
+  },
+  data() {
+    return {
+      pageTitle: "",
+    };
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
