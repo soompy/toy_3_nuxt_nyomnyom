@@ -3,7 +3,7 @@
       <Logo class="w-14 h-14" />
       
       <p class="page-title">
-        {{ pageTitle }}
+        {{ pageTitle.title }}
       </p>
       
   </header>
@@ -13,19 +13,15 @@
 import Logo from "../../components/Logo.vue";
 
 export default {
-  name: "PageHeader",
-  data() {
-    return {
-      pageTitle: "",
-    }
-  },
+  name: "PageHeader",  
+  
   components: {
     Logo,
   },
   props: {
-    pageHeaderTitle: {
-      type: String,      
-      required: true,  
+    pageTitle: {
+      type: Object,
+      required: true,
     },
   },
 };

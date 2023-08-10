@@ -109,7 +109,9 @@ export default {
   data() {
     return {
       eduInfo: "",
-      pageTitle: "특정 페이지 타이틀",
+      pageTitle: {
+            title: "메인페이지"
+        },
     };
   },  
 };

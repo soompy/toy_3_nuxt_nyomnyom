@@ -16,7 +16,9 @@ export default {
   name: "PageMypage",
   data() {
     return {
-      pageTitle: "마이페이지",
+      pageTitle: {
+          title: "마이페이지"
+      },
       user: {
         name: "김유저",
         level: "Lv.13",
