@@ -108,10 +108,7 @@ export default {
   components: { BottomNavigator, Tab, PostListCard, EduList, Login },
   data() {
     return {
-      eduInfo: "",
-      pageTitle: {
-            title: "메인페이지"
-        },
+      eduInfo: "",      
     };
   },  
 };

@@ -2,10 +2,7 @@
   <header class="header">
       <Logo class="w-14 h-14" />
       
-      <p class="page-title">
-        {{ pageTitle.title }}
-      </p>
-      
+      <p class="page-title"></p>
   </header>
 </template>
 
@@ -17,13 +14,7 @@ export default {
   
   components: {
     Logo,
-  },
-  props: {
-    pageTitle: {
-      type: Object,
-      required: true,
-    },
-  },
+  },  
 };
 </script>
 
@@ -37,7 +28,6 @@ export default {
   border-bottom: 1px solid #eeeeee;
   .page-title {
     font-size: 20px;
-    // margin-left: auto;
   }
 }
 </style>

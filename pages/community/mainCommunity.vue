@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        컴니티
     </div>
 </template>
 

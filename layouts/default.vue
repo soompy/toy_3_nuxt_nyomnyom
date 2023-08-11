@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHeader :pageTitle="{ title: '' }" />
+    <PageHeader />
     <nuxt />
   </div>
 </template>
@@ -12,7 +12,6 @@ export default {
   components: {
     PageHeader,
   },
-
 };
 </script>
 

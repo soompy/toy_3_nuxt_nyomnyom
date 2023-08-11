@@ -24,12 +24,9 @@ import PostListCard from "../../components/widgets/card/PostListCard.vue";
 
 export default {
   components: { ProfilePhoto, UserInfo, PostListCard, Title, MenuCard },
-  PostListCarde: "PageMypage",
+  name: "PageMypage",
   data() {
-    return {
-      pageTitle: {
-        title: "마이페이지",
-      },
+    return {      
       user: {
         name: "김유저",
         level: "Lv.13",
