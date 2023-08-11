@@ -86,10 +86,12 @@
       <router-link to="/community/mainCommunity">커뮤니티</router-link>
       <router-link to="/join/join">조인</router-link>
       <router-link to="/mypage/pageMypage">마이페이지</router-link>
+      
       <router-link to="/">검색</router-link>
       <router-link to="/">스토어</router-link>
       <router-link to="/">위젯</router-link>
-      <router-link to="/">대시보드</router-link>      
+      <router-link to="/">대시보드</router-link>     
+
     </div>
 
     <BottomNavigator />

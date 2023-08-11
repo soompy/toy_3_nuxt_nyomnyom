@@ -1,12 +1,17 @@
 <template>
     <div>
-        컴니티
+        <Chat></Chat>
     </div>
 </template>
 
 <script>
+import Chat from "../../layouts/chat.vue";
+
 export default {
   name: "MainCommunity",
+  components: {
+    Chat,
+  },
 };
 </script>
 
