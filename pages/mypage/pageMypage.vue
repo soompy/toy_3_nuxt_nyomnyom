@@ -6,10 +6,10 @@
     </section>
 
     <section class="user-contents">
-      <h2>제목</h2>
+      <Title :text="'오늘의 메뉴'" />
       <PostListCard />
 
-      <h2>제목</h2>
+      <Title :text="'스토어'" />
       <MenuCard />
     </section>
   </div>
@@ -19,10 +19,11 @@
 import ProfilePhoto from "../../components/profile/ProfilePhoto.vue";
 import UserInfo from "../../components/profile/UserInfo.vue";
 import MenuCard from "../../components/widgets/card/MenuCard.vue";
+import Title from "../../components/Title.vue";
 import PostListCard from "../../components/widgets/card/PostListCard.vue";
 
 export default {
-  components: { ProfilePhoto, UserInfo, PostListCard, MenuCard },
+  components: { ProfilePhoto, UserInfo, PostListCard, Title, MenuCard },
   PostListCarde: "PageMypage",
   data() {
     return {
