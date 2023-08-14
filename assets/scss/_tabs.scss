@@ -29,3 +29,18 @@
 .tab-content {
     padding: 20px;
 }
+
+// 관심사 탭 리스트
+.interests-list {
+    .interests-item {
+        .image {
+            border: 2px solid $secondary-color;
+        }
+
+        &.active {
+            .image {
+                border: 2px solid $primary-color;
+            }
+        }
+    }
+}

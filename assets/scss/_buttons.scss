@@ -3,6 +3,15 @@
 
     &.login {
         background: $color-grey;
+        
+        &.active {
+            background: $primary-color;    
+        }
+    }
+
+    &.chat {
+        background: $secondary-color;
+        border-radius: 8px;
     }
 
     &.confirm {
@@ -14,10 +23,7 @@
     }
 
     &.primary {
-
-        &.active {
-            background: $primary-color;
-        }
+        background: $primary-color;
     }
 
 }

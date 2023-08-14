@@ -51,14 +51,7 @@ export default {
             width: 100%;
             box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
             background: #eee;
-            margin-bottom: 10px;
-
-            .edu-box {
-                .edu-title {}
-
-                .edu-text {}
-
-            }
+            margin-bottom: 10px;            
 
             &:last-child {
                 margin-bottom: 0;

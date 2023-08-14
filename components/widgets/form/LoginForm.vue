@@ -12,7 +12,7 @@
       </div>    
 
       <Button
-        class="btn login primary mt-16"      
+        class="btn login mt-16"      
         :class="{ 'active': isButtonEnabled }"
         label="Login"
         :width="'full'"

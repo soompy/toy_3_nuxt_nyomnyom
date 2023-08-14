@@ -3,12 +3,12 @@
     <div v-for="(message, index) in messages" :key="index">
       {{ message }}
     </div>
-    <input
+    <input class="msg-box"
       v-model="newMessage"
       @keyup.enter="sendMessage"
       placeholder="Type your message..."
     />
-    DD
+    
   </div>
 </template>
 
@@ -31,3 +31,6 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+</style>
