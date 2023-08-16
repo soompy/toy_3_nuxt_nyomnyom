@@ -2,10 +2,10 @@
   <div class="community-wrapper">
     <section class="interests-tab">
       <strong>관심사</strong>
-      <InterestsList />        
-    </section>
+      <InterestsList />            
+    </section>    
 
-    <InterestsCard />   
+    <InterestsCard />
 
     <button class="btn chat">
       뇸뇸톡 <br /> 시작
