@@ -42,5 +42,9 @@
                 border: 2px solid $primary-color;
             }
         }
+
+        &.on {
+            border: 2px solid $primary-color;
+        }
     }
 }

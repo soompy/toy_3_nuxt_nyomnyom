@@ -1,12 +1,31 @@
 <template>
   <ul class="interests-list">
-    <li class="interests-item" v-for="(interests, index) in interestsItem" :key="index">
+    <!-- <li
+      class="interests-item"
+      v-for="(interests, index) in interestsItem"
+      :key="index"      
+      @click="tabClicked = index"
+    >
       <span class="image"
         ><img
           :src="require(`/assets/images/${interests.image}.png`)"
           :alt="interests.title"
       /></span>
       <p class="interests-name">{{ interests.title }}</p>
+    </li> -->
+
+    <li
+      class="interests-item"
+      v-for="(interest, index) in interests"
+      :key="index"
+      @click="handleTabClick(index)"
+    >
+      <span class="image"
+        ><img
+          :src="require(`/assets/images/${interest.image}.png`)"
+          :alt="interest.title"
+      /></span>
+      <p class="interests-name">{{ interest.title }}</p>
     </li>
   </ul>
 </template>
@@ -14,9 +33,14 @@
 <script>
 export default {
   name: "InterestsList",
+  methods: {
+    handleTabClick(index) {
+      this.$emit("tabClicked", index);
+    },
+  },
   data() {
     return {
-      interestsItem: [
+      interests: [
         { image: "interest_00", title: "햄버거" },
         { image: "interest_01", title: "샌드위치" },
         { image: "interest_02", title: "타코" },
@@ -45,7 +69,7 @@ export default {
       display: block;
       width: 50px;
       height: 50px;
-      border-radius: 50%;      
+      border-radius: 50%;
     }
     .interests-name {
       font-size: 12px;
