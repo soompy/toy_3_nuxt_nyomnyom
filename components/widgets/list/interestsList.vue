@@ -20,6 +20,9 @@
 <script>
 export default {
   name: "InterestsList",
+  props: {
+    interests: Array,
+  },
   data() {
     return {      
       activeTab: 0,      

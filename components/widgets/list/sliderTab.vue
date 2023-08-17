@@ -5,7 +5,16 @@
       <InterestsList @tabClicked="handleTabClick" />
     </section>
 
-    <SliderComponent v-if="selectedTabIndex === activeTabIndex" :cards="cards" :items="items" />
+    <!-- <SliderComponent
+      v-for="(card, idx) in cards"
+      :key="idx"
+      v-if="selectedTabIndex === idx"
+      :cards="card"
+      :items="items"
+    /> -->
+
+    <SliderComponent v-for="(card, idx) in cards" :key="idx" v-if="selectedTabIndex === idx" :cards="card" :items="items" />
+
   </div>
 </template>
 
@@ -25,14 +34,13 @@ export default {
   data() {
     return {
       selectedTabIndex: 0,
-      activeTabIndex: 0,
       cards: [
-        { top: "1번" },
-        { top: "2번" },
-        { top: "3번" },
-        { top: "4번" },
-        { top: "5번" },
-        { top: "6번" },
+        [{ top: "1번" },],
+        [{ top: "2번" },],
+        [{ top: "3번" },],
+        [{ top: "4번" },],
+        [{ top: "5번" },],
+        [{ top: "6번" },],        
       ],
       items: [
         {
@@ -54,7 +62,7 @@ export default {
   },
   methods: {
     handleTabClick(index) {
-      this.activeTabIndex = index;
+      this.selectedTabIndex = index;
     },
   },
 };

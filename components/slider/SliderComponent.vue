@@ -26,7 +26,7 @@ export default {
   props: {
     cards: Array,
     items: Array,
-  },
+  },  
 };
 </script>
 
