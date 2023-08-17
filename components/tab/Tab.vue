@@ -2,7 +2,12 @@
   <div>
     <div class="tabs">
       <ul>
-        <li v-for="(item, index) in items" :key="index" :class="{ active: index === selectedTab }" @click="selectedTab = index">
+        <li
+          v-for="(item, index) in items"
+          :key="index"
+          :class="{ active: index === selectedTab }"
+          @click="selectedTab = index"
+        >
           {{ item.label }}
         </li>
       </ul>
@@ -28,10 +33,8 @@ export default {
         { label: "Tab 4", content: "Tab 4 Content" },
       ],
     };
-  },  
+  },
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

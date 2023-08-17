@@ -1,26 +1,30 @@
 <template>
-  <section class="slider-wrapper">
-    <div class="slider-box">
-      <div class="slide-item" v-for="(item, index) in items" :key="index">
-        <span class="slide-picture">
-          <img
-            :src="require(`/assets/images/panda/${item.photo}.webp`)"
-            :alt="item.name"
-          />
-        </span>
-        <span class="slide-text">
-          <strong>{{ item.title }}</strong>
-          <span>{{ item.description }}</span>
-        </span>
+  <div>
+    <section class="slider-wrapper" v-for="(card, idx) in cards" :key="idx">
+      <p>{{ card.top }}</p>
+      <div class="slider-box">
+        <div class="slide-item" v-for="(item, index) in items" :key="index">
+          <span class="slide-picture">
+            <img
+              :src="require(`../../assets/images/panda/${item.photo}.webp`)"
+              :alt="item.name"
+            />
+          </span>
+          <span class="slide-text">
+            <strong>{{ item.title }}</strong>
+            <span>{{ item.description }}</span>
+          </span>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
 export default {
   name: "SliderComponent",
   props: {
+    cards: Array,
     items: Array,
   },
 };

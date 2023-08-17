@@ -1,12 +1,6 @@
 <template>
   <div class="community-wrapper">
-    <section class="interests-tab">
-      <strong>관심사</strong>
-      <InterestsList @tabClicked="handleTabClick" />
-    </section>
-
-    <InterestsCard v-if="selectedTabIndex !== null && selectedTabIndex === 0" />
-
+    <SliderTab />
 
     <button class="btn chat">
       뇸뇸톡 <br />
@@ -20,26 +14,14 @@
 </template>
 
 <script>
-import InterestsCard from "../../components/widgets/card/InterestsCard.vue";
-import InterestsList from "../../components/widgets/list/interestsList.vue";
+import SliderTab from '../../components/widgets/list/sliderTab.vue';
 import Chat from "../../layouts/chat.vue";
 
 export default {
   name: "MainCommunity",
   components: {
     Chat,
-    InterestsList,
-    InterestsCard,
-  },
-  data() {
-    return {
-      selectedTabIndex: null,
-    };
-  },
-  methods: {
-    handleTabClick(index) {
-      this.selectedTabIndex = index;
-    },
+    SliderTab,
   },
 };
 </script>
@@ -60,17 +42,6 @@ export default {
   line-height: 1.4;
   font-weight: bold;
   border-radius: 50%;
-}
-
-.interests-tab {
-  display: flex;
-  align-items: center;
-  padding: 20px 0 20px 20px;
-  strong {
-    flex-shrink: 0;
-    font-size: 13px;
-    padding-right: 10px;
-  }
 }
 
 .chat-wrapper {
