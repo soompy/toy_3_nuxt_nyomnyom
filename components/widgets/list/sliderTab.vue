@@ -2,19 +2,16 @@
   <div class="slider-container">
     <section class="interests-tab">
       <strong>관심사</strong>
-      <InterestsList @tabClicked="handleTabClick" />
+      <InterestsList @tabClicked="handleTabClick" :interests="interests" />
     </section>
 
-    <!-- <SliderComponent
-      v-for="(card, idx) in cards"
-      :key="idx"
-      v-if="selectedTabIndex === idx"
-      :cards="card"
+    <SliderComponent 
+      v-for="(card, idx) in cards" 
+      :key="idx" 
+      v-if="selectedTabIndex === idx" 
+      :cards="card" 
       :items="items"
-    /> -->
-
-    <SliderComponent v-for="(card, idx) in cards" :key="idx" v-if="selectedTabIndex === idx" :cards="card" :items="items" />
-
+    />
   </div>
 </template>
 
@@ -24,9 +21,6 @@ import InterestsList from "./interestsList.vue";
 
 export default {
   name: "SliderTab",
-  props: {
-    interests: Array,
-  },
   components: {
     SliderComponent,
     InterestsList,
@@ -57,6 +51,14 @@ export default {
           description:
             "숨막히게 귀엽고 깜찍한 우주최강 킹갓 아기판다 푸바오의 원픽 판다 빵",
         },
+      ],
+      interests: [
+        { image: "interest_00", title: "햄버거" },
+        { image: "interest_01", title: "샌드위치" },
+        { image: "interest_02", title: "타코" },
+        { image: "interest_03", title: "핫도그" },
+        { image: "interest_04", title: "조각피자" },
+        { image: "interest_05", title: "피자" },
       ],
     };
   },

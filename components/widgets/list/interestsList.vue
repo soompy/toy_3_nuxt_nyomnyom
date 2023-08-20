@@ -25,15 +25,7 @@ export default {
   },
   data() {
     return {      
-      activeTab: 0,      
-      interests: [
-        { image: "interest_00", title: "햄버거" },
-        { image: "interest_01", title: "샌드위치" },
-        { image: "interest_02", title: "타코" },
-        { image: "interest_03", title: "핫도그" },
-        { image: "interest_04", title: "조각피자" },
-        { image: "interest_05", title: "피자" },
-      ],
+      activeTab: 0,
     };
   },
   methods: {
