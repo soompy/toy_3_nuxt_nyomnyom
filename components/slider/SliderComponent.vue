@@ -1,7 +1,6 @@
 <template>
   <div>
-    <section class="slider-wrapper" v-for="(card, idx) in cards" :key="idx">
-      <p>{{ card.top }}</p>
+    <section class="slider-wrapper">
       <div class="slider-box">
         <div class="slide-item" v-for="(item, index) in items" :key="index">
           <span class="slide-picture">
@@ -22,11 +21,10 @@
 
 <script>
 export default {
-  name: "SliderComponent",
+  name: "SliderComponent", 
   props: {
-    cards: Array,
     items: Array,
-  },  
+  },
 };
 </script>
 
