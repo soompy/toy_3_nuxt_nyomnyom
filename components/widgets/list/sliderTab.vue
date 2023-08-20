@@ -212,7 +212,8 @@ export default {
 .interests-tab {
   display: flex;
   align-items: center;
-  padding: 20px 0 20px 20px;
+  padding-top: 20px;
+  padding-left: 20px;
   strong {
     flex-shrink: 0;
     font-size: 13px;
