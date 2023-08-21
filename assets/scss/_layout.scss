@@ -30,13 +30,17 @@ img, i {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     
     .modal-content {
         background-color: $color-white;
         padding: 20px;
         border-radius: 4px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        h2, p, button {
+            font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light, AppleSDGothicNeo-Light,
+    sans-serif;
+        }        
     }
 }
 

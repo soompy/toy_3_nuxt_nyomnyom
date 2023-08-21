@@ -14,7 +14,8 @@
     &.join {
         display: flex;
         align-items: center;
-        margin: 14px auto 0;
+        margin-top: 14px;
+        margin-left: auto;
         background: $primary-color;
         border-radius: 8px;
         &.disabled {
@@ -38,5 +39,4 @@
     &.primary {
         background: $primary-color;
     }
-
 }

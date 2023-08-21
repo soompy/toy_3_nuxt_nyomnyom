@@ -1,39 +1,52 @@
 <template>
-  <ul class="join-list">
-    <li class="join-item" v-for="(joinItem, index) in joinItems" :key="joinItem.date">
-      <span
-        class="tag"
-        :class="{
-          finish: isPast(joinItem.date),
-          imminent: isImminent(joinItem.date) && !isPast(joinItem.date),
-          spare: !isImminent(joinItem.date) && !isPast(joinItem.date),
-        }"
-      >
-        {{ joinItem.tag }}
-        <span v-if="isImminent(joinItem.date) && !isPast(joinItem.date)">마감임박</span>
-        <span v-else-if="isPast(joinItem.date)">마감</span>
-        <span v-else-if="!isImminent(joinItem.date) && !isPast(joinItem.date)">여유</span>
-      </span>
-      <p class="join-name">{{ joinItem.name }} 모임</p>
-      <div class="item-info">
-        <strong class="date">일시 : {{ joinItem.date }}</strong>
-        <span class="place">장소 : {{ joinItem.place }}</span>
-        <span class="deadline"
-          >조인 마감 기한 :
-          <strong>{{ formatTimeRemaining(joinItem.date) }}</strong>
+  <div>
+    <ul class="join-list">
+      <li class="join-item" v-for="(joinItem, index) in joinItems" :key="joinItem.date">
+        <span
+          class="tag"
+          :class="{
+            finish: isPast(joinItem.date),
+            imminent: isImminent(joinItem.date) && !isPast(joinItem.date),
+            spare: !isImminent(joinItem.date) && !isPast(joinItem.date),
+          }"
+        >
+          {{ joinItem.tag }}
+          <span v-if="isImminent(joinItem.date) && !isPast(joinItem.date)">마감임박</span>
+          <span v-else-if="isPast(joinItem.date)">마감</span>
+          <span v-else-if="!isImminent(joinItem.date) && !isPast(joinItem.date)"
+            >여유</span
+          >
         </span>
+        <p class="join-name">{{ joinItem.name }} 모임</p>
+        <div class="item-info">
+          <strong class="date">일시 : {{ joinItem.date }}</strong>
+          <span class="place">장소 : {{ joinItem.place }}</span>
+          <span class="deadline"
+            >조인 마감 기한 :
+            <strong>{{ formatTimeRemaining(joinItem.date) }}</strong>
+          </span>
+        </div>
+        <Button
+          class="btn join pl-4 pr-4"
+          label="조인하기"
+          :height="46"
+          textColor="white"
+          :class="{ disabled: isPast(joinItem.date) }"
+          @click="openModal(joinItem)"
+          :disabled="isPast(joinItem.date)"
+        />
+      </li>
+    </ul>
+
+    <Modal v-if="showModal" :join-item="modalData" @close="closeModal">
+      <div>
+        <h2>{{ modalData.name }} 모임</h2>
+        <p>일시: {{ modalData.date }}</p>
+        <p>장소: {{ modalData.place }}</p>
+        <button class="close-button" @click="closeModal">닫기</button>
       </div>
-      <Button
-        class="btn join pl-4 pr-4"
-        label="조인하기"
-        :height="46"
-        textColor="white"
-        :class="{ disabled: joinItem.tag === 'finish' }"
-        @click="openModal(joinItem)"
-        :disabled="joinItem.tag === 'finish'"
-      />
-    </li>
-  </ul>
+    </Modal>
+  </div>
 </template>
 
 <script>
@@ -43,6 +56,9 @@ export default {
   name: "joinList",
   components: {
     Button,
+  },
+  props: {
+    joinItem: Object,
   },
   data() {
     return {
@@ -75,6 +91,7 @@ export default {
       ],
       timers: [],
       showModal: false,
+      modalData: null,
     };
   },
   computed: {
@@ -128,12 +145,12 @@ export default {
       return `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
     },
     openModal(joinItem) {
-      // this.showModal = true;
-      // this.modalData = joinItem;
-      console.log("showModal before opening modal:", this.showModal);
       this.showModal = true;
       this.modalData = joinItem;
-      console.log("showModal after opening modal:", this.showModal);
+    },
+    closeModal() {
+      this.showModal = false;
+      this.modalData = null;
     },
   },
 };
@@ -205,6 +222,12 @@ export default {
   }
   100% {
     background: #fffc00;
+  }
+}
+
+.modal-overlay {
+  .modal-content {
+    width: 100%;
   }
 }
 </style>
