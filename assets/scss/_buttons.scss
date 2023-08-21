@@ -1,11 +1,24 @@
 .btn {
     transition: all 0.5s ease-in-out;
+    font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light, AppleSDGothicNeo-Light,
+    sans-serif;
 
     &.login {
         background: $color-grey;
         
         &.active {
             background: $primary-color;    
+        }
+    }
+
+    &.join {
+        display: flex;
+        align-items: center;
+        margin: 14px auto 0;
+        background: $primary-color;
+        border-radius: 8px;
+        &.disabled {
+            background: $color-grey;
         }
     }
 

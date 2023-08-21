@@ -9,14 +9,14 @@
       <div class="form-box mt-4">
         <label for="password">Password:</label>
         <input type="password" id="password" v-model="password" required />
-      </div>    
+      </div>
 
       <Button
-        class="btn login mt-16"      
-        :class="{ 'active': isButtonEnabled }"
+        class="btn login mt-16"
+        :class="{ active: isButtonEnabled }"
         label="Login"
         :width="'full'"
-        :height="50"            
+        :height="50"
         textColor="white"
         :is-enabled="isButtonEnabled"
         @click="handleButtonClick"
@@ -31,12 +31,12 @@
         <button class="btn cancel" @click="hideLoginConfirmationModal">취소</button>
       </div>
     </Modal>
-  </div>  
+  </div>
 </template>
 
 <script>
 import Button from "../../button/Button";
-import Modal from '../../Modal.vue';
+import Modal from "../../Modal.vue";
 
 export default {
   name: "LoginForm",
@@ -86,7 +86,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
 .container {

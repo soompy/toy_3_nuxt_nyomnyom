@@ -24,7 +24,7 @@ export default {
     interests: Array,
   },
   data() {
-    return {      
+    return {
       activeTab: 0,
     };
   },
