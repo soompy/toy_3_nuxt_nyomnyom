@@ -91,7 +91,6 @@
       <router-link to="/store/mainStore">스토어</router-link>
       <router-link to="/">위젯</router-link>
       <router-link to="/">대시보드</router-link>     
-
     </div>
 
     <BottomNavigator />

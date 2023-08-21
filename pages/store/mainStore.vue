@@ -1,6 +1,10 @@
 <template>
     <div>
-        
+        <BottomPopup>
+          <div>
+            테스트ㅇㅇㅇㅇㅇㅇ
+          </div>
+        </BottomPopup>
     </div>
 </template>
 
