@@ -158,7 +158,7 @@ export default {
 
 <style lang="scss" scoped>
 .join-list {
-  padding: 20px;
+  padding: 0 20px 40px;
   .join-item {
     position: relative;
     width: 100%;
@@ -196,22 +196,24 @@ export default {
       font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light,
         AppleSDGothicNeo-Light, sans-serif;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 10px 0 6px;
     }
     .item-info {
       font-size: 14px;
       strong,
       span {
-        display: inline-block;
+        display: block;
         font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light,
           AppleSDGothicNeo-Light, sans-serif;
-      }
-      .date {
-      }
-      .place {
+          font-weight: normal;
       }
       .deadline {
+        display: flex;
       }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

@@ -93,12 +93,11 @@
       <router-link to="/">대시보드</router-link>     
     </div>
 
-    <BottomNavigator />
+    
   </div>
 </template>
 
 <script>
-import BottomNavigator from "../components/bottomNavigator.vue";
 import Tab from "../components/tab/Tab.vue";
 import PostListCard from './widgets/card/PostListCard.vue';
 import EduList from './widgets/list/eduList.vue';
@@ -106,7 +105,7 @@ import Login from './widgets/form/LoginForm.vue'
 
 export default {
   name: "NuxtTutorial",
-  components: { BottomNavigator, Tab, PostListCard, EduList, Login },
+  components: { Tab, PostListCard, EduList, Login },
   data() {
     return {
       eduInfo: "",      
