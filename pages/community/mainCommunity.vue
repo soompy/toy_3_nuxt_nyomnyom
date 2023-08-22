@@ -2,12 +2,12 @@
   <div class="community-wrapper">
     <SliderTab />
 
-    <button class="btn chat">
+    <button class="btn chat" @click="openChat">
       뇸뇸톡 <br />
       시작
     </button>
 
-    <section class="chat-wrapper">
+    <section class="chat-wrapper" v-if="showChat">
       <Chat></Chat>
     </section>
   </div>
@@ -22,6 +22,16 @@ export default {
   components: {
     Chat,
     SliderTab,
+  },
+  data() {
+    return {
+      showChat: false,
+    }
+  },
+  methods: {
+    openChat() {
+      this.showChat = true;
+    },
   },
 };
 </script>
@@ -45,6 +55,11 @@ export default {
 }
 
 .chat-wrapper {
-  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 </style>
