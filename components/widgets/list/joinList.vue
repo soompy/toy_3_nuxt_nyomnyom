@@ -33,29 +33,51 @@
           textColor="white"
           :class="{ disabled: isPast(joinItem.date) }"
           @click="openModal(joinItem)"
-          :disabled="isPast(joinItem.date)"
+          :disabled="isPast(joinItem.date)"          
         />
       </li>
     </ul>
 
-    <Modal v-if="showModal" :join-item="modalData" @close="closeModal">
+    <Modal v-if="showModal && modalData" :join-item="modalData" @close="closeModal">
       <div>
         <h2>{{ modalData.name }} 모임</h2>
         <p>일시: {{ modalData.date }}</p>
         <p>장소: {{ modalData.place }}</p>
-        <button class="close-button" @click="closeModal">닫기</button>
+        <div class="modal-bottom">
+          <Button
+            class="btn join pl-4 pr-4"
+            label="조인확인"
+            :height="40"
+            textColor="white"            
+            @click="openConfirm(modalData)"
+            :disabled="modalData === null"
+          />
+          <Button
+            class="btn cancel pl-4 pr-4"
+            label="취소"
+            :height="40"
+            textColor="black"            
+            @click="closeModal"            
+          />        
+        </div>        
       </div>
+    </Modal>
+
+    <Modal v-if="showConfirm" :join-item="modalData" @close="closeModal">
+      <div><strong> {{ modalData.name }} 모임 <br> 조인완료!!</strong></div>
     </Modal>
   </div>
 </template>
 
 <script>
 import Button from "../../button/Button.vue";
+import Modal from "../../Modal.vue";
 
 export default {
   name: "joinList",
   components: {
     Button,
+    Modal,
   },
   props: {
     joinItem: Object,
@@ -92,6 +114,7 @@ export default {
       timers: [],
       showModal: false,
       modalData: null,
+      showConfirm: false,
     };
   },
   computed: {
@@ -151,6 +174,11 @@ export default {
     closeModal() {
       this.showModal = false;
       this.modalData = null;
+    },    
+    openConfirm(modalData) {
+      this.showConfirm = true;
+      this.showModal = false;
+      this.modalData = modalData;
     },
   },
 };
@@ -230,6 +258,25 @@ export default {
 .modal-overlay {
   .modal-content {
     width: 100%;
+  }
+  .modal-bottom {
+    display: flex;
+    align-content: center;
+    margin-top: 20px;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      margin-right: 8px;
+      margin-top: 0;
+      border-radius: 6px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
 </style>
