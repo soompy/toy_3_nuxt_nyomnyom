@@ -28,6 +28,11 @@
         border-radius: 8px;
     }
 
+    &.send {
+        background: $primary-color;
+        color: $color-white;
+    }
+
     &.confirm {
         background: $secondary-color;
     }

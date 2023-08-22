@@ -8,14 +8,18 @@
     </button>
 
     <section class="chat-wrapper" v-if="showChat">
-      <Chat></Chat>
+      <button class="btn back w-10 h-10" @click="closeChat">
+        <i class="icon ic_back w-6 h-6"></i>
+      </button>
+      <Chat class="chat-box" :messages="messages" @send="sendMessage"></Chat>
     </section>
   </div>
 </template>
 
 <script>
-import SliderTab from '../../components/widgets/list/sliderTab.vue';
+import SliderTab from "../../components/widgets/list/sliderTab.vue";
 import Chat from "../../layouts/chat.vue";
+import io from "socket.io-client";
 
 export default {
   name: "MainCommunity",
@@ -26,12 +30,27 @@ export default {
   data() {
     return {
       showChat: false,
-    }
+      messages: [],
+      socket: null,
+    };
   },
   methods: {
     openChat() {
       this.showChat = true;
     },
+    sendMessage(message) {
+      this.socket.emit("chat message", message);
+      this.messages.push({ text: message, self: true });
+    },
+    closeChat() {
+      this.showChat = false;
+    },
+  },
+  mounted() {
+    this.socket = io("http://localhost:3000");
+    this.socket.on("chat message", (message) => {
+      this.messages.push(message);
+    });
   },
 };
 </script>
@@ -61,5 +80,26 @@ export default {
   z-index: 1;
   width: 100%;
   height: 100%;
+
+  .btn.back {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: #e1f5fe;
+    .icon {
+      margin: auto;
+    }
+  }
+
+  .chat-box {
+    position: relative;
+    top: 40px;
+    left: 0;
+    width: 100%;
+  }
 }
 </style>
