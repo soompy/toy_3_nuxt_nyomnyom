@@ -30,18 +30,39 @@ export default {
 .menu-card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 8px;
   .card-item {
     display: flex;
     flex-direction: column;
+    padding: 10px;
     cursor: pointer;
+    transition: all 0.7s linear;
     .icon {
-        margin: auto;
+      position: relative;
+      margin: auto;
+      &::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        display: block;
+        clear: both;
+        content: "";
+        width: 150%;
+        height: 150%;
+        background-color: #e1f5fe;
+        border-radius: 10px;
+        background-color: #e1f5fe;
+      }
     }
     .item-name {
       font-size: 12px;
+      font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light,
+        AppleSDGothicNeo-Light, sans-serif;
       text-align: center;
-      margin-top: 2px;
+      line-height: initial;
+      margin-top: 14px;
     }
   }
 }
