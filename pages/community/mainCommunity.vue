@@ -19,7 +19,6 @@
 <script>
 import SliderTab from "../../components/widgets/list/sliderTab.vue";
 import Chat from "../../layouts/chat.vue";
-import io from "socket.io-client";
 
 export default {
   name: "MainCommunity",
@@ -31,7 +30,6 @@ export default {
     return {
       showChat: false,
       messages: [],
-      socket: null,
     };
   },
   methods: {
@@ -39,18 +37,11 @@ export default {
       this.showChat = true;
     },
     sendMessage(message) {
-      this.socket.emit("chat message", message);
       this.messages.push({ text: message, self: true });
     },
     closeChat() {
       this.showChat = false;
     },
-  },
-  mounted() {
-    this.socket = io("http://localhost:3000");
-    this.socket.on("chat message", (message) => {
-      this.messages.push(message);
-    });
   },
 };
 </script>

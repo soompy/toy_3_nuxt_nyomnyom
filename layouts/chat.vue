@@ -52,7 +52,7 @@ export default {
   height: 80vh;
   .message {
     margin: 26px 0;
-    padding: 8px;
+    padding: 8px 12px;
     border-radius: 14px;
   }
 }
