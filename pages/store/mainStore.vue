@@ -1,6 +1,7 @@
 <template>
   <div>
-    <BottomPopup>
+    <button @click="pop">팝업온</button>
+    <BottomPopup v-if="popupOn">
       <div>테스트ㅇㅇㅇㅇㅇㅇ</div>
     </BottomPopup>
   </div>
@@ -9,6 +10,16 @@
 <script>
 export default {
   name: "MainStore",
+  data() {
+    return {
+      popupOn: false,
+    }
+  },
+  methods: {
+    pop() {
+      this.popupOn = true;
+    }
+  },
 };
 </script>
 

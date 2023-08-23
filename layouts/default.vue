@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="wrapper">
     <PageHeader :pageTitle="pageTitle" />
-    <nuxt />
+    <nuxt class="contents" />
     <BottomNavigator />
   </div>
 </template>
@@ -34,4 +34,18 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  .contents {
+    position: relative;    
+    width: 100%;
+    height: calc(100vh - 130px);
+  }
+}
+
+
+</style>
