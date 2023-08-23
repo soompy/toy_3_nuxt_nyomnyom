@@ -60,6 +60,7 @@ export default {
   height: 60px;
   font-size: 12px;
   line-height: 1.4;
+  font-family: "Noto Serif KR", serif;
   font-weight: bold;
   border-radius: 50%;
 }
