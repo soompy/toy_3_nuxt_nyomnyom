@@ -1,0 +1,11 @@
+.best-play {    
+    .top-box {        
+        background: url("../images/carrot.png") center center repeat $primary-color;
+        color: $color-white;            
+    }
+    .best-play-container {        
+        .best-play-box {
+            background: $color-white;
+        }
+    }
+}

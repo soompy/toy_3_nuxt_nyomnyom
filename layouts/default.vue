@@ -18,8 +18,8 @@ export default {
   computed: {
     pageTitle() {
       switch (this.$route.name) {
-        case "store-mainStore":
-          return "스토어";
+        case "media-mediaContents":
+          return "미디어 콘텐츠";
         case "community-mainCommunity":
           return "커뮤니티";
         case "join-join":
@@ -39,13 +39,10 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  
   .contents {
     position: relative;    
     width: 100%;
-    height: calc(100vh - 130px);
+    padding-bottom: 100px;
   }
 }
-
-
 </style>

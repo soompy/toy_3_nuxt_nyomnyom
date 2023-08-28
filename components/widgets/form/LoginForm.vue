@@ -11,7 +11,7 @@
         <input type="password" id="password" v-model="password" required />
       </div>
 
-      <Button
+      <ButtonCp
         class="btn login mt-16"
         :class="{ active: isButtonEnabled }"
         label="Login"
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import Button from "../../button/Button";
+import ButtonCp from "../../button/ButtonCp";
 import Modal from "../../Modal.vue";
 
 export default {
@@ -50,7 +50,7 @@ export default {
     };
   },
   components: {
-    Button,
+    ButtonCp,
     Modal,
   },
   watch: {

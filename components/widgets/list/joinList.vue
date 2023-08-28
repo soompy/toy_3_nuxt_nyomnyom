@@ -26,7 +26,7 @@
             <strong>{{ formatTimeRemaining(joinItem.date) }}</strong>
           </span>
         </div>
-        <Button
+        <ButtonCp
           class="btn join pl-4 pr-4"
           label="조인하기"
           :height="46"
@@ -44,7 +44,7 @@
         <p>일시: {{ modalData.date }}</p>
         <p>장소: {{ modalData.place }}</p>
         <div class="modal-bottom">
-          <Button
+          <ButtonCp
             class="btn join pl-4 pr-4"
             label="조인확인"
             :height="40"
@@ -52,7 +52,7 @@
             @click="openConfirm(modalData)"
             :disabled="modalData === null"
           />
-          <Button
+          <ButtonCp
             class="btn cancel pl-4 pr-4"
             label="취소"
             :height="40"
@@ -70,13 +70,13 @@
 </template>
 
 <script>
-import Button from "../../button/Button.vue";
+import ButtonCp from "../../button/ButtonCp.vue";
 import Modal from "../../Modal.vue";
 
 export default {
   name: "joinList",
   components: {
-    Button,
+    ButtonCp,
     Modal,
   },
   props: {
@@ -174,11 +174,13 @@ export default {
     closeModal() {
       this.showModal = false;
       this.modalData = null;
-    },    
+    },            
     openConfirm(modalData) {
-      this.showConfirm = true;
-      this.showModal = false;
-      this.modalData = modalData;
+      if (modalData) {
+        this.showConfirm = true;
+        this.showModal = false;
+        this.modalData = modalData;
+      }
     },
   },
 };

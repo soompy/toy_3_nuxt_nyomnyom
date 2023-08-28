@@ -15,7 +15,7 @@
   
 <script>
 export default {
-  name: 'Button',
+  name: 'ButtonCp',
   props: {
     label: String,
     width: {
