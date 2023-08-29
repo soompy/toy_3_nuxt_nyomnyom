@@ -8,7 +8,7 @@
     <section class="thumbnail-card-wrapper"></section>
 
     <!-- 영상콘텐츠 -->
-    <section class="best-play">
+    <section class="media-play">
       <div class="top-box">
         <p>
           오늘의 푸바오 <br />
@@ -18,22 +18,39 @@
       <div class="best-play-container">
         <div class="best-play-box">
           <youtube-frame :video-id="videoId"></youtube-frame>
-          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/KRDH7IJ-P14?si=7yNa1BkltIaBIdTU&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         </div>
       </div>
     </section>
 
+    <section class="media-diary">
+      <DiaryList />
+    </section>
+
     <ButtonCp
-      class="btn primary pl-4 pr-4"
-      label="팝업온버튼"
+      class="btn primary pl-4 pr-4 flex items-center m-auto"
+      label="바오가족 보러가기"
       :height="46"
-      textColor="white"
+      textColor="black"
       @click="openPopup"
     />
 
     <section class="bottomPopup-wrapper" v-if="popupOn">
       <BottomPopup @close="closePopup">
-        <div>테스트ㅇㅇㅇㅇㅇㅇ</div>
+        <div class="popup-inner">
+          <div v-if="showCalendar">
+            <p>신청 캘린더 UI 표시</p>
+          </div>
+          <div v-else>
+            <p>귀여운 바오가족 보러 <br />판다월드 가기!</p>
+            <ButtonCp
+              class="btn primary pl-4 pr-4 mt-8 flex items-center m-auto"
+              label="신청 캘린더 보기"
+              :height="46"
+              textColor="black"
+              @click="showCalendar = true"
+            />
+          </div>
+        </div>
       </BottomPopup>
     </section>
   </div>
@@ -42,14 +59,16 @@
 <script>
 import ButtonCp from "../../components/button/ButtonCp.vue";
 import YoutubeFrame from "../../components/widgets/card/youtubeFrame.vue";
+import DiaryList from "./diaryList.vue";
 import ThumbnailCardList from "./thumbnailCardList.vue";
 
 export default {
   name: "MediaContents",
   components: {
     ButtonCp,
-    ThumbnailCardList,
     YoutubeFrame,
+    DiaryList,
+    ThumbnailCardList,
   },
   mounted() {
     console.log(this.$route.name);
@@ -58,6 +77,7 @@ export default {
   data() {
     return {
       popupOn: false,
+      showCalendar: false,
       thumbs: [
         { image: "panda_ai_00", title: "1번", text: "사랑이" },
         { image: "panda_ai_01", title: "2번", text: "아이바오" },
@@ -82,6 +102,7 @@ export default {
     },
     closePopup() {
       this.popupOn = false;
+      this.showCalendar = false;
     },
   },
 };
@@ -93,8 +114,10 @@ export default {
   width: 100%;
   padding: 16px;
 }
-.best-play {
+.media-play {
   position: relative;
+  width: 100%;
+  height: calc(100% - 150px);
   .top-box {
     position: absolute;
     left: 0;
@@ -107,7 +130,6 @@ export default {
       font-size: 20px;
       font-weight: 500;
       font-family: "Noto Serif KR", serif;
-      text-shadow: -2px 0px #000000, 0px 2px #000000, 2px 0px #000000, 0px -2px #000000;
     }
   }
   .best-play-container {
@@ -119,6 +141,23 @@ export default {
     .best-play-box {
       overflow: hidden;
       border-radius: 20px;
+    }
+  }
+}
+
+.media-diary {
+  padding: 20px;
+}
+.bottomPopup-wrapper {
+  position: relative;
+  .popup-inner {    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    > div {
+      height: 100%;
     }
   }
 }

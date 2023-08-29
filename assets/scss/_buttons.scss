@@ -1,7 +1,5 @@
 .btn {
-    transition: all 0.5s ease-in-out;
-    font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light, AppleSDGothicNeo-Light,
-    sans-serif;
+    transition: all 0.5s ease-in-out;    
 
     &.login {
         background: $color-grey;
@@ -42,6 +40,64 @@
     }
 
     &.primary {
-        background: $color-green;
+        background: $primary-color;
+    }
+
+    &.like {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        &:before, &:after {      
+            opacity: 0;      
+            display: block;
+            clear: both;
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;            
+            background: #EA4AAA;   
+            transform-origin: center center;
+            animation: waves 2s ease-in-out infinite;
+            animation-fill-mode: forwards;
+        }
+        &:before {            
+            width: 36px;
+            height: 36px;
+            transition: all 0.3s ease-in-out;
+        }
+        &:after {            
+            width: 48px;
+            height: 48px;                    
+            transition: all 0.4s ease-in-out;    
+        }  
+        &.on {            
+            &:before {
+                opacity: 0.3;
+            }
+            &:after {
+                opacity: 0.1;
+            }        
+        }
+    }
+}
+
+@keyframes waves {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    25% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    75% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.5);
     }
 }

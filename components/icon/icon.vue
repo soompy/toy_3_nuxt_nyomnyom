@@ -1,17 +1,33 @@
 <template>
-    <i class="icon" :class="type"></i>
+  <img class="icon" :src="iconPath" :width="width" :height="height" />
 </template>
 
 <script>
 export default {
-    name: "Icon",
-    props: {
-        type: String,        
+  name: "Icon",
+  props: {
+    name: String,
+    width: {
+      type: String,
+      default: "1em",
     },
-    methods: {
-        
-    }    
+    height: {
+      type: String,
+      default: "1em",
+    },
+  },
+  computed: {
+    iconPath() {
+      return require(`../../assets/icons/${this.name}.svg`);
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.icon {
+  position: relative;
+  display: block;
+  fill: currentColor; 
+}
+</style>
