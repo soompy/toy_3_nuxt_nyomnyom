@@ -36,10 +36,10 @@ export default {
   height: 70px;
   padding: 6px 20px;
   border-bottom: 1px solid #eeeeee;
-  background: #ffffff;
+  background: #ffbd2c;
+  box-shadow: 6px 0px 5px 1px rgba(0, 0, 0, 0.1);
   .page-title {
-    font-size: 17px;
-    font-weight: 500;   
+    font-size: 17px;        
     margin-left: -32px;
   }
 }

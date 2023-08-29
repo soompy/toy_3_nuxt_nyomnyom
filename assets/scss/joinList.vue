@@ -188,7 +188,7 @@ export default {
 
 <style lang="scss" scoped>
 .join-list {
-  padding: 0 20px;
+  padding: 0 20px 40px;
   .join-item {
     position: relative;
     width: 100%;

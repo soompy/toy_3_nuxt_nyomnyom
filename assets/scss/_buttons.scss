@@ -7,7 +7,7 @@
         background: $color-grey;
         
         &.active {
-            background: $primary-color;    
+            background: $color-green;    
         }
     }
 
@@ -16,7 +16,7 @@
         align-items: center;
         margin-top: 14px;
         margin-left: auto;
-        background: $primary-color;
+        background: $color-green;
         border-radius: 8px;
         &.disabled {
             background: $color-grey;
@@ -29,7 +29,7 @@
     }
 
     &.send {
-        background: $primary-color;
+        background: $color-green;
         color: $color-white;
     }
 
@@ -42,6 +42,6 @@
     }
 
     &.primary {
-        background: $primary-color;
+        background: $color-green;
     }
 }

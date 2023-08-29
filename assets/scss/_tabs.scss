@@ -39,12 +39,12 @@
 
         &.active {
             .image {
-                border: 2px solid $primary-color;
+                border: 2px solid $color-green;
             }
         }
 
         &.on {
-            border: 2px solid $primary-color;
+            border: 2px solid $color-green;
         }
     }
 }

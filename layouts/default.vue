@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <PageHeader :pageTitle="pageTitle" />
-    <nuxt class="contents" />
+    <nuxt class="contents-box" />
     <BottomNavigator />
   </div>
 </template>
@@ -38,11 +38,12 @@ export default {
 .wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
-  .contents {
-    position: relative;    
-    width: 100%;
-    padding-bottom: 100px;
+  height: 100%;  
+  .contents-box {
+    overflow-y: auto;
+    height: calc(100vh - 130px);
+    padding: 20px 0;
+    box-sizing: border-box;
   }
 }
 </style>

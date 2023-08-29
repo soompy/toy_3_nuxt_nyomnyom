@@ -50,7 +50,7 @@ export default {
   width: 100%;
   height: 60px;
   background: #ffffff;
-  border-top: 1px solid #eeeeee;
+  box-shadow: 6px 0px 5px 1px rgba(0, 0, 0, 0.1);
 
   .navigator {
     display: flex;
@@ -77,9 +77,7 @@ export default {
 
         p {
           font-size: 12px;
-          font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light, AppleSDGothicNeo-Light,
-    sans-serif;
-          line-height: initial;
+          font-family: 'Bagel Fat One', cursive;
           margin-top: 6px;
         }
 
