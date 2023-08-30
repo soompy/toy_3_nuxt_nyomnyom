@@ -69,7 +69,7 @@
       </div>
     </Modal>
 
-    <Modal v-if="showConfirm" :join-item="modalData" @close="closeModal">
+    <Modal v-if="showConfirm" :join-item="modalData" @close="closeDim">
       <div class="confetti-container">
         <strong>
           {{ modalData.name }} 모임 <br />
@@ -83,6 +83,7 @@
             :style="{
               backgroundColor: confettiPiece.color,
               left: confettiPiece.left + 'px',
+              top: confettiPiece.top + 'px',
               animationDelay: confettiPiece.animationDelay + 's',
             }"
           ></div>
@@ -140,7 +141,7 @@ export default {
           image: "join_04",
           title: "오마카세모임",
           name: "오마카세",
-          date: "2023-11-30T00:00:00",
+          date: "2023-11-30",
           place: "용산",
         },
       ],
@@ -209,6 +210,9 @@ export default {
       this.showModal = false;
       this.modalData = null;
     },
+    closeDim() {
+      this.showConfirm = false;      
+    },
     openConfirm(modalData) {
       if (modalData) {
         this.showConfirm = true;
@@ -216,11 +220,13 @@ export default {
         this.modalData = modalData;
 
         this.generateConfetti();
+        this.animateConfetti();
 
         setTimeout(() => {
           this.showConfirm = false;
           this.confettiPieces = [];
-        }, 2000);
+          cancelAnimationFrame(this.animationFrame);
+        }, 5000);
       }
     },
     generateConfetti() {
@@ -230,11 +236,27 @@ export default {
       for (let i = 0; i < confettiCount; i++) {
         const confettiPiece = {
           color: colors[Math.floor(Math.random() * colors.length)],
-          left: Math.random() * 100,
-          animationDelay: Math.random() * 2,
+          left: Math.random() * window.innerWidth,
+          top: 0,
+          animationDuration: Math.random() * 2 + 1 + "s",
         };
         this.confettiPieces.push(confettiPiece);
       }
+
+      this.animateConfetti();
+    },
+    animateConfetti() {
+      const animationInterval = 100;
+
+      const animate = () => {
+        for (let i = 0; i < this.confettiPieces.length; i++) {
+          this.confettiPieces[i].top += 3;
+        }
+
+        this.animationFrame = requestAnimationFrame(animate);
+      };
+
+      animate();
     },
   },
 };
@@ -359,18 +381,8 @@ export default {
     .confetti-piece {
       position: absolute;
       width: 6px;
-      height: 6px;      
-      animation: fall 2s linear infinite;
+      height: 6px;
     }
-  }
-}
-
-@keyframes fall {
-  0% {
-    transform: translate(0, -20vh) rotate(0deg);
-  }
-  100% {
-    transform: translate(80vw, 100vh) rotate(360deg);
   }
 }
 </style>
