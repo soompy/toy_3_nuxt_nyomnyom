@@ -38,7 +38,8 @@
       <BottomPopup @close="closePopup">
         <div class="popup-inner">
           <div v-if="showCalendar">
-            <p>신청 캘린더 UI 표시</p>            
+            <p class="mb-4">방문일자를 선택해주세요!</p>  
+            <date-picker></date-picker>          
           </div>
           <div v-else>            
             <span class="panda-bg"><img src="https://media.istockphoto.com/id/1149044549/ko/%EB%B2%A1%ED%84%B0/%EA%B7%80%EC%97%AC%EC%9A%B4-%ED%8C%AC%EB%8D%94-%EC%BA%90%EB%A6%AD%ED%84%B0-%EB%B2%A1%ED%84%B0-%EB%94%94%EC%9E%90%EC%9D%B8.jpg?s=170667a&w=0&k=20&c=PH3Halyrrh_BW2yYkYhcKte7k_ce5fxxnunIBtc8-44=" alt="판다일러스트"></span>
@@ -62,6 +63,7 @@
 <script>
 import ButtonCp from "../../components/button/ButtonCp.vue";
 import YoutubeFrame from "../../components/widgets/card/youtubeFrame.vue";
+import DatePicker from '../../components/widgets/datePicker.vue';
 import DiaryList from "./diaryList.vue";
 import ThumbnailCardList from "./thumbnailCardList.vue";
 
@@ -72,6 +74,7 @@ export default {
     YoutubeFrame,
     DiaryList,
     ThumbnailCardList,
+    DatePicker,
   },
   mounted() {
     console.log(this.$route.name);
