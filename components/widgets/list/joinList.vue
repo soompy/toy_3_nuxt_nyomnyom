@@ -2,6 +2,12 @@
   <div>
     <ul class="join-list">
       <li class="join-item" v-for="(joinItem, index) in joinItems" :key="joinItem.date">
+        <span class="image-wrapper">
+          <img
+            :src="require(`../../../assets/images/join/${joinItem.image}.jpg`)"
+            :alt="joinItem.title"
+          />
+        </span>
         <span
           class="tag"
           :class="{
@@ -28,18 +34,18 @@
         </div>
         <ButtonCp
           class="btn join pl-4 pr-4"
-          label="조인하기"
+          :label="isPast(joinItem.date) ? '조인마감' : '조인하기'"
           :height="46"
           textColor="white"
           :class="{ disabled: isPast(joinItem.date) }"
           @click="openModal(joinItem)"
-          :disabled="isPast(joinItem.date)"          
+          :disabled="isPast(joinItem.date)"
         />
       </li>
     </ul>
 
     <Modal v-if="showModal && modalData" :join-item="modalData" @close="closeModal">
-      <div>
+      <div class="inner">
         <h2>{{ modalData.name }} 모임</h2>
         <p>일시: {{ modalData.date }}</p>
         <p>장소: {{ modalData.place }}</p>
@@ -47,24 +53,41 @@
           <ButtonCp
             class="btn join pl-4 pr-4"
             label="조인확인"
-            :height="40"
-            textColor="white"            
+            :height="46"
+            textColor="white"
             @click="openConfirm(modalData)"
             :disabled="modalData === null"
           />
           <ButtonCp
             class="btn cancel pl-4 pr-4"
             label="취소"
-            :height="40"
-            textColor="black"            
-            @click="closeModal"            
-          />        
-        </div>        
+            :height="46"
+            textColor="black"
+            @click="closeModal"
+          />
+        </div>
       </div>
     </Modal>
 
     <Modal v-if="showConfirm" :join-item="modalData" @close="closeModal">
-      <div><strong> {{ modalData.name }} 모임 <br> 조인완료!!</strong></div>
+      <div class="confetti-container">
+        <strong>
+          {{ modalData.name }} 모임 <br />
+          조인완료!!
+        </strong>
+        <div class="confetti">
+          <div
+            class="confetti-piece"
+            v-for="(confettiPiece, index) in confettiPieces"
+            :key="index"
+            :style="{
+              backgroundColor: confettiPiece.color,
+              left: confettiPiece.left + 'px',
+              animationDelay: confettiPiece.animationDelay + 's',
+            }"
+          ></div>
+        </div>
+      </div>
     </Modal>
   </div>
 </template>
@@ -86,26 +109,36 @@ export default {
     return {
       joinItems: [
         {
+          image: "join_00",
+          title: "와인모임",
           name: "와인",
           date: "2023-08-02",
           place: "강릉",
         },
         {
+          image: "join_01",
+          title: "샤브샤브모임",
           name: "샤브샤브",
           date: "2023-08-23",
           place: "부산",
         },
         {
+          image: "join_02",
+          title: "햄버거모임",
           name: "햄버거",
           date: "2023-09-10",
           place: "강남",
         },
         {
+          image: "join_03",
+          title: "피자모임",
           name: "피자",
           date: "2023-10-21",
           place: "평창",
         },
         {
+          image: "join_04",
+          title: "오마카세모임",
           name: "오마카세",
           date: "2023-11-30T00:00:00",
           place: "용산",
@@ -115,6 +148,7 @@ export default {
       showModal: false,
       modalData: null,
       showConfirm: false,
+      confettiPieces: [],
     };
   },
   computed: {
@@ -174,12 +208,32 @@ export default {
     closeModal() {
       this.showModal = false;
       this.modalData = null;
-    },            
+    },
     openConfirm(modalData) {
       if (modalData) {
         this.showConfirm = true;
         this.showModal = false;
         this.modalData = modalData;
+
+        this.generateConfetti();
+
+        setTimeout(() => {
+          this.showConfirm = false;
+          this.confettiPieces = [];
+        }, 2000);
+      }
+    },
+    generateConfetti() {
+      const confettiCount = Math.floor(Math.random() * 50) + 50;
+      const colors = ["#f06", "#0c6", "#39f", "#f90"];
+
+      for (let i = 0; i < confettiCount; i++) {
+        const confettiPiece = {
+          color: colors[Math.floor(Math.random() * colors.length)],
+          left: Math.random() * 100,
+          animationDelay: Math.random() * 2,
+        };
+        this.confettiPieces.push(confettiPiece);
       }
     },
   },
@@ -188,24 +242,31 @@ export default {
 
 <style lang="scss" scoped>
 .join-list {
-  padding: 0 20px;
   .join-item {
     position: relative;
     width: 100%;
-    padding: 16px;
-    margin-bottom: 12px;
-    border: 1px solid #dedede;
+    padding: 20px;
+    background: #ffffff;
+    border-bottom: 8px solid #eeeeee;
+    .image-wrapper {
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      height: 200px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      filter: contrast(104%);
+      img {
+        object-fit: cover;
+      }
+    }
     .tag {
       font-size: 12px;
       border-style: solid;
       border-width: 1px;
-      padding: 3px 6px;
+      padding: 5px 10px;
       border-radius: 3px;
       transition: all 0.5s ease-in-out;
-      span {
-        font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light,
-          AppleSDGothicNeo-Light, sans-serif;
-      }
       &.imminent {
         border-color: #e50914;
         color: #e50914;
@@ -223,8 +284,6 @@ export default {
     }
     .join-name {
       font-size: 16px;
-      font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light,
-        AppleSDGothicNeo-Light, sans-serif;
       font-weight: bold;
       margin: 10px 0 6px;
     }
@@ -233,17 +292,14 @@ export default {
       strong,
       span {
         display: block;
-        font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light,
-          AppleSDGothicNeo-Light, sans-serif;
-          font-weight: normal;
+        font-weight: normal;
       }
       .deadline {
         display: flex;
       }
     }
-
     &:last-child {
-      margin-bottom: 0;
+      border-bottom: none;
     }
   }
 }
@@ -259,7 +315,19 @@ export default {
 
 .modal-overlay {
   .modal-content {
+    overflow: hidden;
     width: 100%;
+  }
+  .inner {
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 14px;
+      margin: 12px 0;
+    }
   }
   .modal-bottom {
     display: flex;
@@ -279,6 +347,30 @@ export default {
         margin-right: 0;
       }
     }
+  }
+}
+.confetti-container {
+  position: relative;
+  .confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    .confetti-piece {
+      position: absolute;
+      width: 6px;
+      height: 6px;      
+      animation: fall 2s linear infinite;
+    }
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, -20vh) rotate(0deg);
+  }
+  100% {
+    transform: translate(80vw, 100vh) rotate(360deg);
   }
 }
 </style>
