@@ -2,6 +2,8 @@
   <div class="community-wrapper">
     <SliderTab />
 
+    <GalleryBox />
+
     <button class="btn chat" @click="openChat">
       뇸뇸톡 <br />
       시작
@@ -19,12 +21,14 @@
 <script>
 import SliderTab from "../../components/widgets/list/sliderTab.vue";
 import Chat from "../../layouts/chat.vue";
+import GalleryBox from './galleryBox.vue';
 
 export default {
   name: "MainCommunity",
   components: {
     Chat,
     SliderTab,
+    GalleryBox,
   },
   data() {
     return {
