@@ -72,6 +72,10 @@ img, i {
     justify-content: flex-end;
     align-items: center;
     .modal-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         position: relative;
         width: 100%;
         min-height: 40vh;
@@ -83,7 +87,7 @@ img, i {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
         .close-popup {
             display: flex;
-            margin-left: auto;
+            margin-left: auto;            
         }        
     }
     .dim {
