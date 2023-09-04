@@ -22,7 +22,11 @@ export default {
   components: {
     YoutubeFrame,
   },
-  videoId: "KRDH7IJ-P14?si=7yNa1BkltIaBIdTU&amp",
+  data() {
+    return {
+        videoId: "KRDH7IJ-P14?si=7yNa1BkltIaBIdTU&amp",
+    }
+  },  
 };
 </script>
 
@@ -30,7 +34,7 @@ export default {
 .media-play {
   position: relative;
   width: 100%;
-  height: calc(100% - 150px);
+  height: 100%;
   .top-box {
     position: absolute;
     left: 0;
