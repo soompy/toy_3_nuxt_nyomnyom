@@ -10,10 +10,7 @@
 
     <post-list-card></post-list-card>
     
-    <div class="">
-      <edu-list v-model="eduInfo"></edu-list>
-    </div>    
-
+    
     <router-link to="/mypage/pageNotice">공지사항</router-link>
 
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8" style="display: none">
@@ -104,12 +101,7 @@ import Login from './widgets/form/LoginForm.vue';
 import SliderTab from './widgets/list/sliderTab.vue';
 
 export default {
-  name: "NuxtTutorial",
-  components: { Tab, PostListCard, Login, SliderTab },
-  data() {
-    return {
-      eduInfo: "",      
-    };
-  },  
+  name: "NuxtMain",
+  components: { Tab, PostListCard, Login, SliderTab },  
 };
 </script>
