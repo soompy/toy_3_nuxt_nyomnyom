@@ -1,7 +1,9 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="app-container">    
+  <div class="app-container top-0">    
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <SliderTab />
 
     <!-- 슬라이더 -->
     <Tab />
@@ -92,20 +94,18 @@
       <router-link to="/">위젯</router-link>
       <router-link to="/">대시보드</router-link>     
     </div>
-
-    
   </div>
 </template>
 
 <script>
 import Tab from "../components/tab/Tab.vue";
 import PostListCard from './widgets/card/PostListCard.vue';
-import EduList from './widgets/list/eduList.vue';
-import Login from './widgets/form/LoginForm.vue'
+import Login from './widgets/form/LoginForm.vue';
+import SliderTab from './widgets/list/sliderTab.vue';
 
 export default {
   name: "NuxtTutorial",
-  components: { Tab, PostListCard, EduList, Login },
+  components: { Tab, PostListCard, Login, SliderTab },
   data() {
     return {
       eduInfo: "",      
