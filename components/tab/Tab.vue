@@ -22,6 +22,7 @@
 
 <script>
 export default {
+  name: "Tab",
   data() {
     return {
       selectedTab: 0,

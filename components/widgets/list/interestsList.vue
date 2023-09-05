@@ -60,6 +60,6 @@ export default {
       text-align: center;
       margin-top: 4px;
     }
-  }
+  }  
 }
 </style>

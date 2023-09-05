@@ -25,7 +25,14 @@
         <div class="popup-inner">
           <div v-if="showCalendar">
             <p class="mb-4">방문일자를 선택해주세요!</p>  
-            <date-picker></date-picker>          
+            <date-picker></date-picker>     
+            <ButtonCp
+              class="btn primary pl-4 pr-4 flex items-center m-auto"
+              label="바오가족 보러가기"
+              :height="46"
+              textColor="black"
+              @click="openPopup"
+            />           
           </div>
           <div v-else>            
             <span class="panda-bg"><img src="https://media.istockphoto.com/id/1149044549/ko/%EB%B2%A1%ED%84%B0/%EA%B7%80%EC%97%AC%EC%9A%B4-%ED%8C%AC%EB%8D%94-%EC%BA%90%EB%A6%AD%ED%84%B0-%EB%B2%A1%ED%84%B0-%EB%94%94%EC%9E%90%EC%9D%B8.jpg?s=170667a&w=0&k=20&c=PH3Halyrrh_BW2yYkYhcKte7k_ce5fxxnunIBtc8-44=" alt="판다일러스트"></span>
@@ -48,7 +55,6 @@
 
 <script>
 import ButtonCp from "../../components/button/ButtonCp.vue";
-// import YoutubeFrame from "../../components/widgets/card/youtubeFrame.vue";
 import DatePicker from '../../components/widgets/datePicker.vue';
 import DiaryList from "./diaryList.vue";
 import MediaPlayer from './mediaPlayer.vue';
@@ -58,7 +64,6 @@ export default {
   name: "MediaContents",
   components: {
     ButtonCp,
-    // YoutubeFrame,
     DiaryList,
     ThumbnailCardList,
     DatePicker,
@@ -87,7 +92,6 @@ export default {
         { image: "panda_le_01", title: "6번", text: "러바오" },
         { image: "panda_le_02", title: "6번", text: "아빠판다" },
       ],
-      // videoId: "KRDH7IJ-P14?si=7yNa1BkltIaBIdTU&amp",
     };
   },
   methods: {
@@ -108,37 +112,6 @@ export default {
   width: 100%;
   padding: 16px;
 }
-// .media-play {
-//   position: relative;
-//   width: 100%;
-//   height: calc(100% - 150px);
-//   .top-box {
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     background-size: 60px 60px;
-//     padding: 20px;
-//     padding-bottom: 100px;
-//     p {
-//       font-size: 20px;
-//       font-weight: 500;
-//       font-family: "Noto Serif KR", serif;
-//     }
-//   }
-//   .best-play-container {
-//     position: absolute;
-//     left: 0;
-//     top: 100px;
-//     width: 100%;
-//     padding: 0 20px;
-//     .best-play-box {
-//       overflow: hidden;
-//       border-radius: 20px;
-//     }
-//   }
-// }
-
 .media-diary {
   padding: 20px;
 }

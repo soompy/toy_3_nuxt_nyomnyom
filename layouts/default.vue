@@ -41,9 +41,8 @@ export default {
   height: 100%;  
   .contents-box {
     overflow-y: auto;
-    height: calc(100vh - 130px);
-    padding: 20px 0;
-    box-sizing: border-box;
+    top: 0;
+    height: calc(100vh - 130px);    
   }
 }
 </style>

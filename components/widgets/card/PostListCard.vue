@@ -3,10 +3,10 @@
     <ul class="post-card-list">
       <li class="post-card-item" v-for="(card, index) in listItems" :key="index">
         <h3 class="post-title">{{ card.title }}</h3>
-        <p class="post-text">{{ card.text }}</p>
-        <span class="image-wrapper w-30 h-30">
-          <img
-            :src="require(`../../../assets/images/${card.image}.png`)"
+        <p class="post-text">{{ card.text }}</p>        
+        <span class="image-wrapper w-30 h-30" v-if="card.image">
+          <img            
+            :src="getImagePath(card.image)"
             :alt="card.title"
           />
         </span>
@@ -17,16 +17,17 @@
 
 <script>
 export default {
-  name: "PostCard",
-  data() {
-    return {
-      listItems: [
-        { title: "제목칸1", text: "소제목칸1", image: "photo_1_11zon" },
-        { title: "제목칸2", text: "소제목칸5", image: "photo_2_1_11zon" },
-        { title: "제목칸3", text: "소제목칸5", image: "photo_3_2_11zon" },
-        { title: "제목칸4", text: "소제목칸", image: "photo_4_3_11zon" },
-      ],
-    };
+  name: "PostListCard",   
+  props: {
+    listItems: {
+      type: Array,
+      required: true,
+    },
+  },
+  methods: {
+    getImagePath(imageName) {
+      return require(`../../../assets/images/${imageName}`);
+    },
   },
 };
 </script>
@@ -37,7 +38,7 @@ export default {
   position: relative;
   width: 100%;
   padding: 0 20px;
-  .post-card-list {
+  .post-card-list {    
     display: flex;
     align-content: center;
     position: relative;
@@ -67,6 +68,10 @@ export default {
         margin-right: 0;
       }
     }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 </style>
