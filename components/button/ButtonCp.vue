@@ -19,7 +19,7 @@ export default {
   props: {
     label: String,
     width: {
-      type: Number,      
+      type: String,      
     },
     height: {
       type: Number,
