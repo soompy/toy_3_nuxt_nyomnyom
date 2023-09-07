@@ -76,17 +76,9 @@
           조인완료!!
         </strong>
         <div class="confetti">
-          <div
-            class="confetti-piece"
-            v-for="(confettiPiece, index) in confettiPieces"
-            :key="index"
-            :style="{
-              backgroundColor: confettiPiece.color,
-              left: confettiPiece.left + 'px',
-              top: confettiPiece.top + 'px',
-              animationDelay: confettiPiece.animationDelay + 's',
-            }"
-          ></div>
+          <div class="confetti-piece">
+            <!-- 로띠넣기 -->
+          </div>
         </div>
       </div>
     </Modal>
@@ -149,7 +141,6 @@ export default {
       showModal: false,
       modalData: null,
       showConfirm: false,
-      confettiPieces: [],
     };
   },
   computed: {
@@ -217,47 +208,9 @@ export default {
       if (modalData) {
         this.showConfirm = true;
         this.showModal = false;
-        this.modalData = modalData;
-
-        this.generateConfetti();
-        this.animateConfetti();
-
-        setTimeout(() => {
-          this.showConfirm = false;
-          this.confettiPieces = [];
-          cancelAnimationFrame(this.animationFrame);
-        }, 5000);
+        this.modalData = modalData;        
       }
-    },
-    generateConfetti() {
-      const confettiCount = Math.floor(Math.random() * 50) + 50;
-      const colors = ["#f06", "#0c6", "#39f", "#f90"];
-
-      for (let i = 0; i < confettiCount; i++) {
-        const confettiPiece = {
-          color: colors[Math.floor(Math.random() * colors.length)],
-          left: Math.random() * window.innerWidth,
-          top: 0,
-          animationDuration: Math.random() * 2 + 1 + "s",
-        };
-        this.confettiPieces.push(confettiPiece);
-      }
-
-      this.animateConfetti();
-    },
-    animateConfetti() {
-      const animationInterval = 100;
-
-      const animate = () => {
-        for (let i = 0; i < this.confettiPieces.length; i++) {
-          this.confettiPieces[i].top += 3;
-        }
-
-        this.animationFrame = requestAnimationFrame(animate);
-      };
-
-      animate();
-    },
+    },        
   },
 };
 </script>
@@ -378,11 +331,7 @@ export default {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    .confetti-piece {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-    }
+    
   }
 }
 </style>
