@@ -78,6 +78,7 @@
         <div class="confetti">
           <div class="confetti-piece">
             <!-- 로띠넣기 -->
+            <ConfettiEffect :animationData="animationData" width="200px" height="200px" />
           </div>
         </div>
       </div>
@@ -87,6 +88,7 @@
 
 <script>
 import ButtonCp from "../../button/ButtonCp.vue";
+import ConfettiEffect from '../../lottie/confettiEffect.vue';
 import Modal from "../../Modal.vue";
 
 export default {
@@ -94,6 +96,7 @@ export default {
   components: {
     ButtonCp,
     Modal,
+    ConfettiEffect,
   },
   props: {
     joinItem: Object,
@@ -141,6 +144,7 @@ export default {
       showModal: false,
       modalData: null,
       showConfirm: false,
+      animationData: require('../../../assets/images/effect/confetti.json'),
     };
   },
   computed: {
