@@ -23,6 +23,7 @@
       <PostListCard :listItems="customListItems" />
     </div>
     
+    <button class="btn btn-primary">부트스트랩</button>
     
 
     <router-link to="/mypage/pageNotice">공지사항</router-link>

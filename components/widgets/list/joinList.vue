@@ -225,8 +225,8 @@ export default {
     position: relative;
     width: 100%;
     padding: 20px;
-    background: #ffffff;
-    border-bottom: 8px solid #eeeeee;
+    background: #ffffff;    
+    box-shadow: 2px 2px 2px #eeeeee;
     .image-wrapper {
       overflow: hidden;
       display: block;

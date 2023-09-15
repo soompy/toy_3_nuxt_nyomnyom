@@ -20,11 +20,14 @@ export default {
   css: [
     '@/assets/css/main.css',
     '@/assets/scss/app.scss',
+    'bootstrap/dist/css/bootstrap.css',
   ],
   
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/bootstrap.js', mode: 'client' }, // client 모드로 설정
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

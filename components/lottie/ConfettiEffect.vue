@@ -28,9 +28,9 @@ export default {
     renderLottie() {
       lottie.loadAnimation({
         container: this.$refs.lottieContainer,
-        renderer: "svg", // 렌더링 방식 선택 (SVG, HTML, Canvas 등)
-        loop: true, // 반복 여부
-        autoplay: true, // 자동 재생 여부
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
         animationData: this.animationData,
       });
     },
@@ -39,5 +39,5 @@ export default {
 </script>
 
 <style scoped>
-/* 스타일링을 원하는 대로 추가하세요 */
+
 </style>
