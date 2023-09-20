@@ -6,8 +6,8 @@
     <section class="media-play">
       <div class="top-box">
         <p>
-          오늘의 푸바오 <br />
-          <strong>Best</strong>영상
+          1초도 놓칠 수 없바옹 <br>
+          오늘은 또 어떤 귀여운 바오가!!
         </p>
       </div>
       <div class="best-play-container">

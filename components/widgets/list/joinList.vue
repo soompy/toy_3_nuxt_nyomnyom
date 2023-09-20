@@ -240,7 +240,7 @@ export default {
       }
     }
     .tag {
-      font-size: 12px;
+      font-size: 0.8rem;
       border-style: solid;
       border-width: 1px;
       padding: 5px 10px;
@@ -262,12 +262,12 @@ export default {
       }
     }
     .join-name {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: bold;
       margin: 10px 0 6px;
     }
     .item-info {
-      font-size: 14px;
+      font-size: 1rem;
       strong,
       span {
         display: block;
@@ -299,12 +299,12 @@ export default {
   }
   .inner {
     h2 {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: bold;
       margin-bottom: 20px;
     }
     p {
-      font-size: 14px;
+      font-size: 1rem;
       margin: 12px 0;
     }
   }

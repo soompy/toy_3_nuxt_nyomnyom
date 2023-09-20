@@ -13,7 +13,7 @@
     </section>
 
     <ButtonCp
-      class="btn primary pl-4 pr-4 flex items-center m-auto"
+      class="btn type-line primary w-60 d-flex items-center justify-content-center mb-10 mx-auto"
       label="바오가족 보러가기"
       :height="46"
       textColor="black"

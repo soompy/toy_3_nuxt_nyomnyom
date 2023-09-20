@@ -57,7 +57,7 @@ export default {
       }
     }
     .item-name {
-      font-size: 12px;
+      font-size: 0.8rem;
       font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light,
         AppleSDGothicNeo-Light, sans-serif;
       text-align: center;

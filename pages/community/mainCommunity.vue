@@ -58,7 +58,7 @@ export default {
   right: 20px;
   width: 60px;
   height: 60px;
-  font-size: 12px;
+  font-size: 0.8rem;
   line-height: 1.4;
   font-family: "Noto Serif KR", serif;
   font-weight: bold;

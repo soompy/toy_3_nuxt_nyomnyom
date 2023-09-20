@@ -107,7 +107,7 @@ export default {
     border-bottom: 1px solid #ccc;
 
     label {
-      font-size: 12px;
+      font-size: 0.8rem;
       margin-bottom: 8px;
     }
 

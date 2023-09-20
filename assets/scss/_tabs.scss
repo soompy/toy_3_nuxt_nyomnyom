@@ -12,7 +12,7 @@
         li {
             flex: 1;
             min-width: calc(100% / 3);
-            font-size: 14px;
+            font-size: 1rem;
             padding: 10px;
             text-align: center;
 
@@ -39,12 +39,12 @@
 
         &.active {
             .image {
-                border: 2px solid $color-green;
+                border: 2px solid $color-grey-1;
             }
         }
 
         &.on {
-            border: 2px solid $color-green;
+            border: 2px solid $color-grey-1;
         }
     }
     &::-webkit-scrollbar {

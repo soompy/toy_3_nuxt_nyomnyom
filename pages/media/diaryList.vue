@@ -71,30 +71,29 @@ export default {
 
 <style lang="scss" scoped>
 .diary-item {
-  position: relative;
-  padding: 20px;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  position: relative;  
+  border-bottom: 1px solid #E2E2E2;    
+  padding: 1.4rem 0;
   .thumbnail-image {
+    overflow: hidden;
     display: block;
     width: 100%;
-    height: 180px;
-    border-radius: 8px;
+    border-radius:0.5rem;
   }
   .text-box {
-    margin-top: 16px;
+    margin-top: 1rem;
     .diary-title {
-      font-size: 18px;
-      font-weight: 300;
+      font-size: 1rem;
+      font-weight: bold;
     }
     .diary-date {
-      font-size: 14px;
-      margin-top: 8px;
+      font-size: 0.8rem;
+      margin: 0.5rem 0 0 0;      
     }
     .btn {
       display: flex;
       margin-left: auto;
+      padding: 0;
     }
   }
   &:last-child {

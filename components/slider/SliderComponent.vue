@@ -31,6 +31,7 @@ export default {
   overflow-x: auto;
   width: 100%;
   padding: 20px;
+  
   .slider-box {
     display: flex;
     align-content: center;
@@ -53,7 +54,7 @@ export default {
         padding: 20px 16px;
         strong {
           display: block;
-          font-size: 12px;
+          font-size: 0.8rem;
           font-family: "Caprasimo", cursive;
         }
         span {

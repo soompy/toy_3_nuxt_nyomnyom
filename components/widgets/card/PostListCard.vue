@@ -51,11 +51,11 @@ export default {
       border: 1px solid #e6ebf0;
       border-radius: 6px;
       .post-title {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: bold;        
       }
       .post-text {
-        font-size: 14px;
+        font-size: 1rem;
         font-weight: 500;
       }
       .image-wrapper {

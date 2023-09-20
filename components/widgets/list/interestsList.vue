@@ -56,7 +56,7 @@ export default {
       border-radius: 50%;
     }
     .interests-name {
-      font-size: 12px;
+      font-size: 0.8rem;
       text-align: center;
       margin-top: 4px;
     }
