@@ -46,7 +46,6 @@ body {
   padding: 0;
   background: #fff;
   color: #000;
-  font-size: 1rem;
   font-family: 'Nanum Gothic', Nanum Gothic, HelveticaNeue-Light,AppleSDGothicNeo-Light,sans-serif;
   word-break: break-all;
   line-height: 170%;
@@ -837,7 +836,6 @@ td {
 input[type='text'], input[type='search'], input[type='password'] {
   -webkit-appearance: none;
   outline: none;
-  font-size: 1rem;  
   border-radius: 6px;
   &::placeholder {
     color: #BBC2C9;
@@ -867,7 +865,6 @@ button{
   padding: 0;
   cursor: pointer;
   border: none;
-  font-size: 1rem;
   
   &:focus {
     outline: none;

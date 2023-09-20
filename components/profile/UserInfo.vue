@@ -22,7 +22,6 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-size: 1rem;
 
   p {
     padding: 2px 0;

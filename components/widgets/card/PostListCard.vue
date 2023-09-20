@@ -37,32 +37,33 @@ export default {
   overflow-x: auto;
   position: relative;
   width: 100%;
-  padding: 0 20px;
-  .post-card-list {    
+  padding: 0 1.2rem;
+  .post-card-list {
     display: flex;
     align-content: center;
     position: relative;
     width: 100%;    
     box-sizing: border-box;
-    .post-card-item {
-      min-width: 70%;
-      margin-right: 16px;
-      padding: 16px 20px;
-      border: 1px solid #e6ebf0;
-      border-radius: 6px;
+    padding-left: 0;
+    .post-card-item {    
+      min-width: 80%;
+      margin-right: 0.5rem;
+      padding: 1.5rem;
+      border: 0.1rem solid #e6ebf0;
+      border-radius: 0.6rem;
       .post-title {
-        font-size: 1rem;
-        font-weight: bold;        
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1.2rem;                
       }
       .post-text {
-        font-size: 1rem;
         font-weight: 500;
       }
       .image-wrapper {
         display: block;
         position: relative;
         object-fit: contain;     
-        margin-top: 4px;
+        margin-top: 0.25rem;
       }
       &:last-child {
         margin-right: 0;

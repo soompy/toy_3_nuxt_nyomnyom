@@ -27,7 +27,7 @@ export default {
         case "mypage-pageMypage":
           return "마이페이지";
         default:
-          return "뇸뇸 당근밭";
+          return "뇸뇸 그라운드";
       }
     },
   },

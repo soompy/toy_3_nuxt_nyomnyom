@@ -78,7 +78,7 @@
         <div class="confetti">
           <div class="confetti-piece">
             <!-- 로띠넣기 -->
-            <ConfettiEffect :animationData="animationData" width="200px" height="200px" />
+            <ConfettiEffect :animationData="animationData" width="200px" height="200px" />            
           </div>
         </div>
       </div>
@@ -88,15 +88,15 @@
 
 <script>
 import ButtonCp from "../../button/ButtonCp.vue";
-import ConfettiEffect from '../../lottie/confettiEffect.vue';
+import ConfettiEffect from '../../lottie/ConfettiEffect.vue';
 import Modal from "../../Modal.vue";
 
 export default {
   name: "joinList",
   components: {
     ButtonCp,
-    Modal,
     ConfettiEffect,
+    Modal,    
   },
   props: {
     joinItem: Object,
@@ -221,6 +221,7 @@ export default {
 
 <style lang="scss" scoped>
 .join-list {
+  padding-left: 0;
   .join-item {
     position: relative;
     width: 100%;
@@ -262,12 +263,10 @@ export default {
       }
     }
     .join-name {
-      font-size: 1rem;
       font-weight: bold;
       margin: 10px 0 6px;
     }
     .item-info {
-      font-size: 1rem;
       strong,
       span {
         display: block;
@@ -299,12 +298,10 @@ export default {
   }
   .inner {
     h2 {
-      font-size: 1rem;
       font-weight: bold;
       margin-bottom: 20px;
     }
     p {
-      font-size: 1rem;
       margin: 12px 0;
     }
   }

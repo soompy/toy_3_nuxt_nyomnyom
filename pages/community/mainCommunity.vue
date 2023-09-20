@@ -54,13 +54,12 @@ export default {
 
 .btn.chat {
   position: fixed;
-  bottom: 60px;
+  bottom: 5rem;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 4rem;
+  height: 4rem;
   font-size: 0.8rem;
   line-height: 1.4;
-  font-family: "Noto Serif KR", serif;
   font-weight: bold;
   border-radius: 50%;
 }

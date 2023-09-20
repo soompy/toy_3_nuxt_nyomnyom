@@ -28,7 +28,7 @@ export default {
   width: 100%;
   height: 100vh;
   .logo {
-    text-align: center;
+    text-align: center;    
   }
 }
 </style>

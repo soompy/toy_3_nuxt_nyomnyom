@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="user-box px-5 py-5">
+    <section class="user-box px-3 py-3">
       <ProfilePhoto />
       <UserInfo :userInfo="user" />
     </section>

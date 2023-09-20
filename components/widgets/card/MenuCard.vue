@@ -34,7 +34,7 @@ export default {
   .card-item {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 0.6rem;
     cursor: pointer;
     transition: all 0.7s linear;
     .icon {
@@ -51,18 +51,15 @@ export default {
         content: "";
         width: 150%;
         height: 150%;
-        background-color: #e1f5fe;
+        background-color: #E2E2E2;
         border-radius: 10px;
-        background-color: #e1f5fe;
       }
     }
     .item-name {
       font-size: 0.8rem;
-      font-family: "Nanum Gothic", Nanum Gothic, HelveticaNeue-Light,
-        AppleSDGothicNeo-Light, sans-serif;
       text-align: center;
       line-height: initial;
-      margin-top: 14px;
+      margin-top: 0.8rem;
     }
   }
 }

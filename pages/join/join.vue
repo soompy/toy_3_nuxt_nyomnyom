@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="top-title">
+    <h2 class="top-title pt-4">
       취향에 맞는 모임에<br>
       조인해보세요!!🍔      
     </h2>
