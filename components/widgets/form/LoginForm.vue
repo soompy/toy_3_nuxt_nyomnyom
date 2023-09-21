@@ -108,7 +108,7 @@ export default {
 
     label {
       font-size: 0.8rem;
-      margin-bottom: 8px;
+      margin-bottom: 0.96rem;
     }
 
     input {

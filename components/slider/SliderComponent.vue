@@ -41,8 +41,7 @@ export default {
       flex-shrink: 0;  
       width: 70%;
       height: 50vh;
-      margin-right: 1rem;      
-      border-radius: 0.8rem;
+      margin-right: 1rem;
       .slide-picture {
         display: block;
         object-fit: cover;

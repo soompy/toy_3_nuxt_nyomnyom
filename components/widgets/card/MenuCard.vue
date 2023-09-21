@@ -30,7 +30,7 @@ export default {
 .menu-card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-gap: 8px;
+  grid-gap: 0.96rem;
   .card-item {
     display: flex;
     flex-direction: column;

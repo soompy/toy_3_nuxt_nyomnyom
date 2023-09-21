@@ -2,14 +2,16 @@
   <div class="post-card-list-wrapper">
     <ul class="post-card-list">
       <li class="post-card-item" v-for="(card, index) in listItems" :key="index">
-        <h3 class="post-title">{{ card.title }}</h3>
-        <p class="post-text">{{ card.text }}</p>        
         <span class="image-wrapper w-30 h-30" v-if="card.image">
           <img            
             :src="getImagePath(card.image)"
             :alt="card.title"
           />
         </span>
+        <div class="post-text-box">
+          <h3 class="post-title">{{ card.title }}</h3>
+          <p class="post-text">{{ card.text }}</p>                
+        </div>        
       </li>
     </ul>
   </div>
@@ -44,29 +46,31 @@ export default {
     position: relative;
     width: 100%;    
     box-sizing: border-box;
-    padding-left: 0;
-    .post-card-item {    
+    padding: 0;
+    .post-card-item {
+      overflow: hidden;    
       min-width: 80%;
-      margin-right: 0.5rem;
-      padding: 1.5rem;
-      border: 0.1rem solid #e6ebf0;
+      margin-right: 1rem;
+      box-shadow: 0 0.12rem 0.3rem rgba(0, 0, 0, .05);
+      border: 0.06rem solid rgba(0, 0, 0, .05);
       border-radius: 0.6rem;
-      .post-title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 1.2rem;                
-      }
-      .post-text {
-        font-weight: 500;
-      }
       .image-wrapper {
         display: block;
         position: relative;
-        object-fit: contain;     
-        margin-top: 0.25rem;
+        object-fit: contain;             
       }
-      &:last-child {
-        margin-right: 0;
+      .post-text-box {
+        padding: 1rem;
+        .post-title {
+          font-size: 1rem;
+          font-weight: bold;
+          margin-bottom: 0.6rem;
+        }
+        .post-text {
+          font-size: 0.9rem;
+          font-weight: 500;
+          margin: 0;
+        }
       }
     }
   }

@@ -27,7 +27,7 @@
             <p class="mb-4">방문일자를 선택해주세요!</p>  
             <date-picker></date-picker>     
             <ButtonCp
-              class="btn primary pl-4 pr-4 flex items-center m-auto"
+              class="btn primary pl-4 pr-4 flex items-center mt-2 m-auto"
               label="뇸뇸 수플레 예약하기"
               :height="40"
               textColor="white"
@@ -109,10 +109,10 @@ export default {
 .thumbnail-wrapper {
   overflow-x: auto;
   width: 100%;
-  padding: 16px;
+  padding: 1rem;
 }
 .media-diary {
-  padding: 20px;
+  padding: 1.25rem;
 }
 .bottomPopup-wrapper {
   position: relative;
@@ -130,7 +130,10 @@ export default {
         position: relative;
         z-index: 5;
       }
-    }        
+    }
   }
+}
+.btn {
+  font-size: 0.9rem;
 }
 </style>

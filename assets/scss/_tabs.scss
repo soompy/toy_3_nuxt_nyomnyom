@@ -59,20 +59,24 @@
 
 // 관심사 탭 리스트
 .interests-list {
+    margin: 0;
     .interests-item {
         .image {
-            border: 2px solid $secondary-color;
+            border: 0.06rem solid $color-light-grey-1;
         }
 
         &.active {
             .image {
-                border: 2px solid $color-grey-1;
+                border: 0.06rem solid $color-grey-2;
+            }
+            .interests-name {
+                font-weight: bold;
             }
         }
 
         &.on {
-            border: 2px solid $color-grey-1;
-        }
+            border: 0.06rem solid $color-grey-1;
+        }        
     }
     &::-webkit-scrollbar {
         display: none;

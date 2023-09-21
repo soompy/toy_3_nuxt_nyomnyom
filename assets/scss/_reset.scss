@@ -836,7 +836,7 @@ td {
 input[type='text'], input[type='search'], input[type='password'] {
   -webkit-appearance: none;
   outline: none;
-  border-radius: 6px;
+  border-radius: 0.72rem;
   &::placeholder {
     color: #BBC2C9;
   }

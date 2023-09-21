@@ -83,6 +83,7 @@ export default {
   .text-box {
     margin-top: 1rem;
     .diary-title {
+      font-size: 1rem;
       font-weight: bold;
     }
     .diary-date {
