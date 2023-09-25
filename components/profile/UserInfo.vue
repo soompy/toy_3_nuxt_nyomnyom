@@ -1,5 +1,5 @@
 <template>
-  <div class="user-info pl-5">
+  <div class="user-info pl-4">
     <p class="user-name">{{ userInfo.name }}</p>
     <p class="user-level">{{ userInfo.level }}</p>
   </div>
@@ -24,13 +24,15 @@ export default {
   flex-direction: column;
 
   p {
-    padding: 2px 0;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    margin: 0;
 
     &.user-name {
       font-weight: bold;
     }
     &.user-level {
-      color: lime;
+      color: #3C4544;
     }
   }
 }

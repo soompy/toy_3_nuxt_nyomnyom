@@ -12,9 +12,9 @@
 import JoinList from "../../components/widgets/list/joinList.vue";
 
 export default {
-  name: "JoinHome",  
-  components: { JoinList },  
-  mounted() { 
+  name: "JoinHome",
+  components: { JoinList },
+  mounted() {
     console.log(this.$route.name);
   },
 };

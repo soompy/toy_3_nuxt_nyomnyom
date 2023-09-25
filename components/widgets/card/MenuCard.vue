@@ -28,32 +28,18 @@ export default {
 
 <style lang="scss" scoped>
 .menu-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-gap: 0.96rem;
+  display: grid;  
+  grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+  grid-gap: 0.5rem;
+  padding: 0 20px;
   .card-item {
     display: flex;
     flex-direction: column;
-    padding: 0.6rem;
-    cursor: pointer;
+    padding: 0.3rem 0.1rem;
     transition: all 0.7s linear;
     .icon {
       position: relative;
-      margin: auto;
-      &::before {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        z-index: -1;
-        transform: translate(-50%, -50%);
-        display: block;
-        clear: both;
-        content: "";
-        width: 150%;
-        height: 150%;
-        background-color: #E2E2E2;
-        border-radius: 10px;
-      }
+      margin: auto;    
     }
     .item-name {
       font-size: 0.8rem;
