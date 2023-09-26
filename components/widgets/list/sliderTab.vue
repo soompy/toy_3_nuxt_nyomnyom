@@ -27,8 +27,8 @@ export default {
   data() {
     return {
       selectedTabIndex: 0,
-      tabsData: [     
-      {
+      tabsData: [
+        {
           items: [
             {
               photo: "panda_fu_00",
