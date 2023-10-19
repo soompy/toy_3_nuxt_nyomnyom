@@ -6,6 +6,7 @@
       <span class="bar"></span>
     </button>
     <div v-if="menuOpen" class="menu">
+      <router-link to="/login/registerMembers">회원가입</router-link>
       <router-link to="/login/loginPage">로그인</router-link>
       <router-link to="/community/mainCommunity">커뮤니티</router-link>
       <router-link to="/join/join">조인</router-link>
