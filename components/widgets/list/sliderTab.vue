@@ -27,8 +27,8 @@ export default {
   data() {
     return {
       selectedTabIndex: 0,
-      tabsData: [     
-      {
+      tabsData: [
+        {
           items: [
             {
               photo: "panda_fu_00",
@@ -212,12 +212,12 @@ export default {
 .interests-tab {
   display: flex;
   align-items: center;
-  padding-top: 20px;
-  padding-left: 20px;
+  padding-top: 1.2rem;
+  padding-left: 1.2rem;
   strong {
     flex-shrink: 0;
-    font-size: 13px;
-    padding-right: 10px;
+    font-size: 0.78rem;
+    padding-right: 0.6rem;
   }
 }
 </style>

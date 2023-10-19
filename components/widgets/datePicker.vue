@@ -130,7 +130,7 @@ export default {
     align-items: center;
     flex-shrink: 0;
     height: 58px;    
-    margin: 0 6px;
+    margin: 0 0.72rem;
     cursor: pointer;
     &.on {
       opacity: 1;

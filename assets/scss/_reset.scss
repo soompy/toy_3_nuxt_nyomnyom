@@ -46,7 +46,6 @@ body {
   padding: 0;
   background: #fff;
   color: #000;
-  font-size: 16px;
   font-family: 'Nanum Gothic', Nanum Gothic, HelveticaNeue-Light,AppleSDGothicNeo-Light,sans-serif;
   word-break: break-all;
   line-height: 170%;
@@ -837,8 +836,7 @@ td {
 input[type='text'], input[type='search'], input[type='password'] {
   -webkit-appearance: none;
   outline: none;
-  font-size: 16px;  
-  border-radius: 6px;
+  border-radius: 0.72rem;
   &::placeholder {
     color: #BBC2C9;
   }
@@ -867,7 +865,6 @@ button{
   padding: 0;
   cursor: pointer;
   border: none;
-  font-size: 16px;
   
   &:focus {
     outline: none;
@@ -884,8 +881,8 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  text-decoration: none;
-  color: #000;
+  text-decoration: none !important;
+  color: #000 !important;
   &:hover {
     color: #000;
     text-decoration: none;

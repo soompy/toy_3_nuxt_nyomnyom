@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <section class="user-box px-5 py-5">
-      <ProfilePhoto />
+  <div class="py-6">
+    <section class="user-box px-3 pb-3">
+      <ProfilePhoto :profile="user" />
       <UserInfo :userInfo="user" />
     </section>
 
@@ -31,9 +31,10 @@ export default {
   data() {
     return {
       user: {
-        name: "김유저",
+        name: "아이바오",
         level: "Lv.13",
-      },
+        image: "panda_ai_00.webp",
+      },      
       customListItems: [
         {
           title: "아이바오에게 당근 선물을 주는 방법은?",
@@ -53,7 +54,7 @@ export default {
         },
       ],
     };
-  },
+  },  
 };
 </script>
 

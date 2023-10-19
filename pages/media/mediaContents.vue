@@ -13,8 +13,8 @@
     </section>
 
     <ButtonCp
-      class="btn primary pl-4 pr-4 flex items-center m-auto"
-      label="바오가족 보러가기"
+      class="btn type-line primary w-60 d-flex items-center justify-content-center mb-10 mx-auto"
+      label="뇸뇸 수플레 예약하기"
       :height="46"
       textColor="black"
       @click="openPopup"
@@ -27,22 +27,21 @@
             <p class="mb-4">방문일자를 선택해주세요!</p>  
             <date-picker></date-picker>     
             <ButtonCp
-              class="btn primary pl-4 pr-4 flex items-center m-auto"
-              label="바오가족 보러가기"
-              :height="46"
-              textColor="black"
+              class="btn primary pl-4 pr-4 flex items-center mt-2 m-auto"
+              label="뇸뇸 수플레 예약하기"
+              :height="40"
+              textColor="white"
               @click="openPopup"
             />           
           </div>
-          <div v-else>            
-            <span class="panda-bg"><img src="https://media.istockphoto.com/id/1149044549/ko/%EB%B2%A1%ED%84%B0/%EA%B7%80%EC%97%AC%EC%9A%B4-%ED%8C%AC%EB%8D%94-%EC%BA%90%EB%A6%AD%ED%84%B0-%EB%B2%A1%ED%84%B0-%EB%94%94%EC%9E%90%EC%9D%B8.jpg?s=170667a&w=0&k=20&c=PH3Halyrrh_BW2yYkYhcKte7k_ce5fxxnunIBtc8-44=" alt="판다일러스트"></span>
-            <div class="panda-text">
-              <p>귀여운 바오가족 보러 <br />판다월드 가기!</p>
+          <div v-else>                        
+            <div class="food-text">
+              <p>가장 맛있는 뇸뇸 수플레 <br />먹으러 가기!</p>
               <ButtonCp
                 class="btn primary pl-4 pr-4 mt-8 flex items-center m-auto"
                 label="신청 캘린더 보기"
-                :height="46"
-                textColor="black"
+                :height="40"
+                textColor="white"
                 @click="showCalendar = true"
               />            
             </div>            
@@ -110,10 +109,10 @@ export default {
 .thumbnail-wrapper {
   overflow-x: auto;
   width: 100%;
-  padding: 16px;
+  padding: 1rem;
 }
 .media-diary {
-  padding: 20px;
+  padding: 1.25rem;
 }
 .bottomPopup-wrapper {
   position: relative;
@@ -126,25 +125,15 @@ export default {
     text-align: center;
     margin: auto;    
     > div {
-      position: relative;
-      .panda-bg {        
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        margin-top: 2px;
-        img {
-          opacity: 0.3;
-          position: relative;              
-        }
-      }
-      .panda-text {
+      position: relative;      
+      .food-text {
         position: relative;
         z-index: 5;
       }
-    }        
+    }
   }
+}
+.btn {
+  font-size: 0.9rem;
 }
 </style>

@@ -37,28 +37,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hamburger-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 16px;
-  cursor: pointer;
-  .bar {
-    width: 24px;
-    height: 2px;
-    background: #333333;
-  }
-}
-.menu {
-  position: absolute;
-  top: 50px;
-  left: 10px;
-  background: white;
-  padding: 10px;
-  border: 1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-}
+
 </style>

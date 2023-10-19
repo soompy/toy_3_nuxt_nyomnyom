@@ -30,26 +30,29 @@ export default {
   align-content: center;
   flex-wrap: wrap;  
   width: 200%;
+  padding-left: 0;
+  margin-bottom: 0;
   li {
-    width: 60px;
-    margin: 6px;
+    width: 4rem;
+    height: auto;
+    margin: 0.5rem;
     a {
       display: flex;
       align-content: center;
       justify-content: center;
-      flex-direction: column;
+      flex-direction: column;      
       .thumbnail {
         overflow: hidden;
         display: block;
         width: 100%;
-        height: 60px;
+        height: 4rem;
         border-radius: 50%;
         background: #eeeeee;
       }
       p {
-        font-size: 12px;
+        font-size: 0.8rem;
         text-align: center;
-        margin-top: 6px;
+        margin: 0.5rem 0 0 0;
       }
     }
   }

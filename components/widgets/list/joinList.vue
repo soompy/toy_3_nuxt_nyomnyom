@@ -36,7 +36,6 @@
           class="btn join pl-4 pr-4"
           :label="isPast(joinItem.date) ? '조인마감' : '조인하기'"
           :height="46"
-          textColor="white"
           :class="{ disabled: isPast(joinItem.date) }"
           @click="openModal(joinItem)"
           :disabled="isPast(joinItem.date)"
@@ -54,7 +53,7 @@
             class="btn join pl-4 pr-4"
             label="조인확인"
             :height="46"
-            textColor="white"
+            textColor="#3C4544"
             @click="openConfirm(modalData)"
             :disabled="modalData === null"
           />
@@ -76,17 +75,9 @@
           조인완료!!
         </strong>
         <div class="confetti">
-          <div
-            class="confetti-piece"
-            v-for="(confettiPiece, index) in confettiPieces"
-            :key="index"
-            :style="{
-              backgroundColor: confettiPiece.color,
-              left: confettiPiece.left + 'px',
-              top: confettiPiece.top + 'px',
-              animationDelay: confettiPiece.animationDelay + 's',
-            }"
-          ></div>
+          <div class="confetti-piece">            
+            <ConfettiEffect :animationData="animationData" width="200px" height="200px" />            
+          </div>
         </div>
       </div>
     </Modal>
@@ -95,13 +86,15 @@
 
 <script>
 import ButtonCp from "../../button/ButtonCp.vue";
+import ConfettiEffect from '../../lottie/ConfettiEffect.vue';
 import Modal from "../../Modal.vue";
 
 export default {
   name: "joinList",
   components: {
     ButtonCp,
-    Modal,
+    ConfettiEffect,
+    Modal,    
   },
   props: {
     joinItem: Object,
@@ -149,7 +142,7 @@ export default {
       showModal: false,
       modalData: null,
       showConfirm: false,
-      confettiPieces: [],
+      animationData: require('../../../assets/images/effect/confetti.json'),
     };
   },
   computed: {
@@ -217,78 +210,46 @@ export default {
       if (modalData) {
         this.showConfirm = true;
         this.showModal = false;
-        this.modalData = modalData;
-
-        this.generateConfetti();
-        this.animateConfetti();
-
-        setTimeout(() => {
-          this.showConfirm = false;
-          this.confettiPieces = [];
-          cancelAnimationFrame(this.animationFrame);
-        }, 5000);
+        this.modalData = modalData;        
       }
-    },
-    generateConfetti() {
-      const confettiCount = Math.floor(Math.random() * 50) + 50;
-      const colors = ["#f06", "#0c6", "#39f", "#f90"];
-
-      for (let i = 0; i < confettiCount; i++) {
-        const confettiPiece = {
-          color: colors[Math.floor(Math.random() * colors.length)],
-          left: Math.random() * window.innerWidth,
-          top: 0,
-          animationDuration: Math.random() * 2 + 1 + "s",
-        };
-        this.confettiPieces.push(confettiPiece);
-      }
-
-      this.animateConfetti();
-    },
-    animateConfetti() {
-      const animationInterval = 100;
-
-      const animate = () => {
-        for (let i = 0; i < this.confettiPieces.length; i++) {
-          this.confettiPieces[i].top += 3;
-        }
-
-        this.animationFrame = requestAnimationFrame(animate);
-      };
-
-      animate();
-    },
+    },        
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .join-list {
+  padding-left: 0;
+  margin: 0;
   .join-item {
     position: relative;
     width: 100%;
-    padding: 20px;
-    background: #ffffff;
-    border-bottom: 8px solid #eeeeee;
+    padding: 1.6rem 20px;
+    background: #ffffff;    
+    box-shadow: 0.24rem 0.24rem 0.24rem #eeeeee;    
     .image-wrapper {
       overflow: hidden;
       display: block;
       width: 100%;
-      height: 200px;
-      border-radius: 14px;
-      margin-bottom: 14px;
+      height: 16rem;
+      border-radius: 0.8rem;
+      margin-bottom: 0.8rem;
       filter: contrast(104%);
       img {
         object-fit: cover;
       }
     }
     .tag {
-      font-size: 12px;
+      display: inline-block;
+      height: 1.6rem;
       border-style: solid;
-      border-width: 1px;
-      padding: 5px 10px;
-      border-radius: 3px;
-      transition: all 0.5s ease-in-out;
+      border-width: 0.12rem;
+      padding: 0 0.4rem;
+      border-radius: 0.36rem;
+      transition: all 0.5s ease-in-out; 
+      span {
+        font-size: 0.8rem;
+      }     
       &.imminent {
         border-color: #e50914;
         color: #e50914;
@@ -305,23 +266,47 @@ export default {
       }
     }
     .join-name {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: bold;
-      margin: 10px 0 6px;
+      margin: 1rem 0 0.72rem;
     }
     .item-info {
-      font-size: 14px;
       strong,
       span {
         display: block;
+        font-size: 0.9rem;
         font-weight: normal;
       }
       .deadline {
         display: flex;
       }
     }
+    .btn {      
+      height: 4.8rem;
+      font-size: 0.9rem;
+      margin-top: 0.6rem;
+      padding: 0 1rem;
+    }
+    &:after {
+      display: block;
+      clear: both;
+      content: '';
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      width: auto;
+      height: 0.06rem;
+      background: #E2E2E2;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
     &:last-child {
       border-bottom: none;
+      &:after {
+        display: none;
+      }
     }
   }
 }
@@ -342,28 +327,26 @@ export default {
   }
   .inner {
     h2 {
-      font-size: 16px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 0.24rem;
     }
     p {
-      font-size: 14px;
-      margin: 12px 0;
+      margin: 1.3rem 0;
     }
   }
   .modal-bottom {
     display: flex;
     align-content: center;
-    margin-top: 20px;
+    margin-top: 2.4rem;
 
     button {
       display: flex;
       align-items: center;
       justify-content: center;
       flex: 1;
-      margin-right: 8px;
+      margin-right: 0.96rem;
       margin-top: 0;
-      border-radius: 6px;
+      border-radius: 0.72rem;
 
       &:last-child {
         margin-right: 0;
@@ -377,12 +360,7 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    pointer-events: none;
-    .confetti-piece {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-    }
+    pointer-events: none;    
   }
 }
 </style>

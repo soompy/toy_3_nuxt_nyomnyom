@@ -42,23 +42,28 @@ export default {
   overflow-x: auto;
   display: flex;
   align-items: center;
+  padding: 0;
   .interests-item {
     display: flex;
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 8px;
+    margin: 0 0.3rem;
     .image {
       overflow: hidden;
       display: block;
-      width: 50px;
-      height: 50px;
+      width: 3rem;
+      height: 3rem;
       border-radius: 50%;
     }
     .interests-name {
-      font-size: 12px;
+      font-size: 0.8rem;
       text-align: center;
-      margin-top: 4px;
+      letter-spacing: -0.06rem;
+      margin: 0.24rem 0 0 0;
+    }
+    &:nth-of-type(1) {
+      margin-left: 0;
     }
   }  
 }

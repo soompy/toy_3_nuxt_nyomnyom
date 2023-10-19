@@ -2,14 +2,15 @@
   <section class="media-play">
     <div class="top-box">
       <p>
-        오늘의 푸바오 <br />
-        <strong>Best</strong>영상
+        1초도 놓칠 수 없바옹 <br>
+        오늘은 또 어떤 귀여운 바오가!!
       </p>
     </div>
     <div class="best-play-container">
       <div class="best-play-box">
         <YoutubeFrame :video-id="videoId" />
       </div>
+      <button class="btn secondary type-line w-50 h-10 mt-3 m-auto">더보기</button>
     </div>
   </section>
 </template>
@@ -31,34 +32,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.media-play {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  .top-box {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background-size: 60px 60px;
-    padding: 20px;
-    padding-bottom: 100px;
-    p {
-      font-size: 20px;
-      font-weight: 500;
-      font-family: "Noto Serif KR", serif;
-    }
-  }
-  .best-play-container {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    padding: 0 20px;
-    .best-play-box {
-      overflow: hidden;
-      border-radius: 20px;
-    }
-  }
+.btn {
+  display: inherit;      
+  font-size: 0.8rem;
+  text-align: center;
+  background: transparent;
 }
 </style>

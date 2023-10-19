@@ -16,9 +16,9 @@ export default {
 
 <style scoped>
 h2 {
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: bold;
   padding-left: 20px;
-  margin: 16px 0;
+  margin: 1rem 0;
 }
 </style>

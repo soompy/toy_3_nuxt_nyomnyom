@@ -30,19 +30,18 @@ export default {
 .slider-wrapper {
   overflow-x: auto;
   width: 100%;
-  padding: 20px;
+  padding: 1rem;
+  
   .slider-box {
     display: flex;
     align-content: center;
     width: 100%;
     .slide-item {
       overflow: hidden;
-      flex-shrink: 0;
-      width: 90%;
-      height: 60vh;
-      margin-right: 18px;
-      box-shadow: 6px 6px 10px 4px rgba(0, 0, 0, 0.2);
-      border-radius: 14px;
+      flex-shrink: 0;  
+      width: 70%;
+      height: 50vh;
+      margin-right: 1rem;
       .slide-picture {
         display: block;
         object-fit: cover;
@@ -50,10 +49,10 @@ export default {
       }
       .slide-text {
         display: block;
-        padding: 20px 16px;
+        padding: 1rem 0;
         strong {
           display: block;
-          font-size: 12px;
+          font-size: 0.9rem;
           font-family: "Caprasimo", cursive;
         }
         span {

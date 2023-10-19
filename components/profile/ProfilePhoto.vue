@@ -1,16 +1,26 @@
 <template>
-  <span class="profile-photo w-20 h-20">
-    <img src="" alt="" />
+  <span class="profile-photo w-16 h-16">
+    <img
+      :src="getProfilePath(profile.image)"
+      :alt="profile.name"
+    />
   </span>
 </template>
 
 <script>
 export default {
-  name: "ProfilePhoto",
-  data() {
-    return {};
+  name: "ProfilePhoto",  
+  props: {
+    profile: {
+      type: Object,
+      required: true
+    },
   },
-  components: {},
+  methods: {
+    getProfilePath(profileName) {     
+      return require(`../../assets/images/panda/${profileName}`);
+    }
+  },
 };
 </script>
 
@@ -19,7 +29,6 @@ export default {
   overflow: hidden;
   flex-shrink: 0;
   object-fit: contain;
-  background: #ccc;
   border-radius: 50%;
 }
 </style>
