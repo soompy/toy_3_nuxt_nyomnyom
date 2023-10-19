@@ -4,7 +4,7 @@
       <div class="slide-item" v-for="(item, index) in items" :key="index">
         <span class="slide-picture">
           <img
-            :src="require(`../../assets/images/panda/${item.photo}.webp`)"
+            :src="require(`../../assets/images/food/${item.photo}.png`)"
             :alt="item.name"
           />
         </span>
@@ -42,20 +42,27 @@ export default {
       width: 70%;
       height: 50vh;
       margin-right: 1rem;
+      border: 1px solid #cccccc;
+      border-radius: 16px;
       .slide-picture {
         display: block;
-        object-fit: cover;
         height: 70%;
+        img {
+          object-fit: contain;
+        }
       }
       .slide-text {
         display: block;
-        padding: 1rem 0;
+        padding: 1rem 1.15rem;
+        border-top: 1px solid #cccccc;
         strong {
           display: block;
           font-size: 0.9rem;
           font-family: "Caprasimo", cursive;
         }
         span {
+          font-size: 0.9rem;
+          line-height: 1.3rem;
           white-space: normal;
           overflow: hidden;
           text-overflow: ellipsis;

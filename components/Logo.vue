@@ -1,7 +1,7 @@
 <template>
     <h1 class="logo">
         <router-link to="/">
-            <span>뇸뇸 <br> 그라운드</span>
+            <span><img src="../assets/images/logo.png" alt="로고"></span>
         </router-link>        
     </h1>
 </template>
@@ -19,10 +19,12 @@ export default {
     justify-content: center;
     margin: 0;
     span {       
-        display: inline-block; 
+        overflow: hidden;
+        display: block; 
         font-size: 0.8rem;
         line-height: 1.2rem;
         color: #F5F5F5;
+        border-radius: 0.8rem;
     }
 }
 </style>

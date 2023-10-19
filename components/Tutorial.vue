@@ -59,8 +59,8 @@ export default {
           image: "photo_1_11zon.png",
         },
         {
-          title: "토핑이 금가루로 가득한 피자 도전하기",
-          text: "색다른 피자 좋아하는 사람들은 여기로 모이세요!!",
+          title: "금가루 시즈닝이 뿌려진 감자튀김 도전하기",
+          text: "색다른 감자튀김을 좋아하는 사람들은 여기로 모이세요!!",
           image: "photo_2_1_11zon.png",
         },
         {

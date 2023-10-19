@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <Logo class="w-14 h-14" />
+    <Logo class="w-12 h-12" />
     <p class="page-title">{{ pageTitle }}</p>
     <MenuBar />
   </header>

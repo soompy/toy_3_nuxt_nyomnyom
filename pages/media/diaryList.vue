@@ -3,7 +3,7 @@
     <div class="diary-item" v-for="(diary, index) in diarys" :key="index">
       <span class="thumbnail-image">
         <img
-          :src="require(`../../assets/images/media/${diary.image}.jpg`)"
+          :src="require(`../../assets/images/story/${diary.image}.png`)"
           :alt="diary.photoName"
         />
       </span>
@@ -37,21 +37,21 @@ export default {
     return {
       diarys: [
         {
-          image: "diary_00",
-          photoName: "푸바오의 뚠빵뚠빵한 하루",
-          title: "푸바오의 뚠빵뚠빵한 하루",
+          image: "meat_00",
+          photoName: "차돌박이",
+          title: "배터지게 먹는 한우 차돌박이",
           date: "2023.08.29",
         },
         {
-          image: "diary_01",
-          photoName: "푸바오의 복지 벤치",
-          title: "푸바오의 복지 벤치",
+          image: "pancake_00",
+          photoName: "수플레 팬케이크",
+          title: "푹신푹신 수플레 팬케이크 만들기",
           date: "2023.08.31",
         },
         {
-          image: "diary_02",
-          photoName: "머위잎을 쓴 뚠뚠이 푸바오",
-          title: "머위잎을 쓴 뚠뚠이 푸바오",
+          image: "shrimp_00",
+          photoName: "대하구이",
+          title: "제철 대하소금구이",
           date: "2023.08.30",
         },
       ],

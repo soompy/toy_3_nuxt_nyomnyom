@@ -53,10 +53,10 @@ img, i {
     flex-direction: column;
     justify-content: space-between;
     width: 1.4rem;
-    height: 1.5rem;
+    height: 1.15rem;
     cursor: pointer;
     .bar {
-        width: 1.6rem;
+        width: 100%;
         height: 0.06rem;
         background: $color-light-grey-0;
     }

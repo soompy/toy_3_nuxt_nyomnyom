@@ -31,171 +31,151 @@ export default {
         {
           items: [
             {
-              photo: "panda_fu_00",
-              name: "푸바오",
-              title: "푸바오 1",
-              description: "판다월드 대스타 아기판다 푸바오! 2020년 7월 20일생으로 머리에 뿔처럼 털이 올라와있어요.",
+              photo: "burger_00",
+              name: "빅맥",
+              title: "빅맥",
+              description: "100% 순 쇠고기 패티 두 장에 빅맥®만의 특별한 소스. \n 입안에서 살살 녹는 치즈와 신선한 양상추, 양파, 그리고 피클까지. \n 50년 넘게 전 세계인의 입맛을 사로 잡은 버거의 대명사.",
             },
             {
-              photo: "panda_fu_01",
-              name: "푸바오",
-              title: "푸바오 2",
+              photo: "burger_01",
+              name: "더블 쿼터파운더 치즈",
+              title: "더블 쿼터파운더 치즈",
               description:
-                "숨막히게 귀엽고 깜찍한 우주최강 장난꾸러기 아기판다 푸바오의 원픽 판다 빵",
+                "두 배 이상 커진 1/4 파운드 \n 비프 패티가 두 장 (226그램)! \n 육즙이 풍부한 고기 맛을 \n 그대로 살린 100% 순 쇠고기 패티 두 장과 \n 치즈 두 장이 입안 가득 완벽하게 조화되는 놀라운 맛",
+            },
+            {
+              photo: "burger_02",
+              name: "맥스파이시 상하이 버거",
+              title: "맥스파이시 상하이 버거",
+              description:
+                "매콤한 시즈닝을 입힌 100% 닭가슴 통살 위에 \n 아삭아삭한 양상추와 신선한 토마토~ \n 겉은 바삭, 속은 부드러운 치킨 패티의 매콤함으로 \n 입맛도 기분도 화끈하게!",
+            },
+          ],
+        },
+        {
+          items: [
+            {
+              photo: "sandwich_00",
+              name: "에그마요",
+              title: "에그마요",
+              description: "부드러운 달걀과 고소한 마요네즈가 만나 더 부드러운 스테디셀러",
+            },
+            {
+              photo: "sandwich_01",
+              name: "이탈리안 비엠티",
+              title: "이탈리안 비엠티",
+              description:
+                "페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! \n 전세계가 사랑하는 써브웨이의 베스트셀러! \n Biggest Meatiest Tastiest, its’ B.M.T.",
+            },
+            {
+              photo: "sandwich_02",
+              name: "비엘티",
+              title: "비엘티",
+              description:
+                "오리지널 아메리칸 스타일 베이컨의 풍미와 바삭함 그대로~",
+            },
+          ],
+        },
+        {
+          items: [
+            {
+              photo: "taco_00",
+              name: "쉬림프 타코 세트",
+              title: "쉬림프 타코 세트",
+              description: "쉬림프 타코 2개 + 콜라",
+            },
+            {
+              photo: "taco_01",
+              name: "치즈 나초",
+              title: "치즈 나초",
+              description: "치즈소스 + 나초칩스",
+            },
+            {
+              photo: "taco_02",
+              name: "빅벨박스",
+              title: "빅벨박스",
+              description: "크런치랩(카니타스) + 소프트 클래식 타코(카니타스) + 크런치 클래식 타코(비프) + 나쵸 칩스 + 치즈 롤 업 + 캔콜라(250ml) 2ea",
+            },
+          ],
+        },
+        {
+          items: [
+            {
+              photo: "hotdog_00",
+              name: "감자핫도그",
+              title: "감자핫도그",
+              description: "오동통한 점보소시지와 고소하고 담백한 감자가 만나 더욱 고급스러운 핫도그",
+            },
+            {
+              photo: "hotdog_01",
+              name: "모짜체다 핫도그",
+              title: "모짜체다 핫도그",
+              description:
+                "고소한 모짜렐라와 담백한 체다치즈를 한번에 맛볼 수 있는 핫도그",
+            },
+            {
+              photo: "hotdog_02",
+              name: "할라피뇨 핫도그",
+              title: "할라피뇨 핫도그",
+              description:
+                "오동통하고 매콤한 할라피뇨 소시지로 식감을 살리고 느끼함은 줄인 매운 핫도그",
+            },
+          ],
+        },
+        {
+          items: [
+            {
+              photo: "chicken_00",
+              name: "켄터키통다리순살치킨 5조각",
+              title: "켄터키통다리순살치킨 5조각",
+              description: "닭다리 통살로 만든 최고급 프리미엄 치킨(스윗칠리소스에 찍어 먹으면 더욱 맛있습니다)",
+            },
+            {
+              photo: "chicken_01",
+              name: "갓양념치킨 5조각",
+              title: "갓양념치킨 5조각",
+              description:
+                "달콤 매콤, 먹을수록 땡기는 맵달의 완벽한 조화 한국 사람 입맛에 딱! 맞춘 환상의 양념 치킨!",
+            },
+            {
+              photo: "chicken_02",
+              name: "핫크리스피치킨 5조각",
+              title: "핫크리스피치킨 5조각",
+              description:
+                "KFC만의 비법으로 매콤바삭하게 튀겨낸 KFC 핫크리스피치킨",
+            },
+          ],
+        },
+        {
+          items: [
+            {
+              photo: "pizza_00",
+              name: "씨푸드킹",
+              title: "씨푸드킹",
+              description: "쫄깃한 통관자와 탱글탱글 통새우가 듬뿍! \n 달콤한 프레첼 엣지까지~ \n 오리지널 도우 : 크런치 라이스가 도우의 수분을 지켜줘 더욱 쫄깃! 바삭, 고소한 맛까지",
+            },
+            {
+              photo: "pizza_01",
+              name: "립스테이크",
+              title: "립스테이크",
+              description:
+                "180g 갈비맛 스테이크가 통째로! \n 오리지널 도우 : 크런치 라이스가 도우의 수분을 지켜줘 더욱 쫄깃! 바삭, 고소한 맛까지",
+            },
+            {
+              photo: "pizza_02",
+              name: "토핑킹",
+              title: "토핑킹",
+              description: "돌아온 토핑킹, 이번엔 고기 토핑 360g을 한 판 가득 담았다! \n 오리지널 도우 : 크런치 라이스가 도우의 수분을 지켜줘 더욱 쫄깃! 바삭, 고소한 맛까지",
             },
           ],
         },        
-        {
-          items: [
-            {
-              photo: "panda_ai_00",
-              name: "아이바오",
-              title: "아이바오 1",
-              description:
-                "세 딸의 엄마 아이바오! 2013년 7월 13일생으로 순둥하고 둥글둥글한 미모를 갖고 있어요.",
-            },
-            {
-              photo: "panda_ai_01",
-              name: "아이바오",
-              title: "아이바오 2",
-              description:
-                "낙엽을 걷는 아이바오 예뻐예뻐 아이바오!",
-            },
-            {
-              photo: "panda_ai_02",
-              name: "아이바오",
-              title: "아이바오 3",
-              description:
-                "아이스블럭에서 휴식을 취하고 있는 아이바오!",
-            },
-          ],
-        },   
-        {
-          items: [
-            {
-              photo: "panda_le_00",
-              name: "러바오",
-              title: "러바오 1",
-              description:
-                "판다월드 청일점 러바오! 2012년 7월 28일생으로 미식가이자 낭만판다예요.",
-            },
-            {
-              photo: "panda_le_01",
-              name: "러바오",
-              title: "러바오 2",
-              description: "아기시절 러바오는 애교가 넘치는 장난꾸러기 였어요.",
-            },
-            {
-              photo: "panda_le_02",
-              name: "러바오",
-              title: "러바오 3",
-              description: "잠자는 숲속의 러바오 왕자!",
-            },
-          ],
-        },        
-        {
-          items: [
-            {
-              photo: "panda_aifu_00",
-              name: "아이바오와 푸바오",
-              title: "아이바오와 푸바오 1",
-              description:
-                "해먹에서 함께 노는 바오걸즈! 아이바오도 아기가 되었어요.",
-            },
-            {
-              photo: "panda_aifu_01",
-              name: "아이바오와 푸바오",
-              title: "아이바오와 푸바오 2",
-              description:
-                "바오걸즈의 대나무먹방시간",
-            },
-            {
-              photo: "panda_aifu_02",
-              name: "아이바오와 푸바오",
-              title: "아이바오와 푸바오 2",
-              description:
-                "푸바오를 바라보는 아이바오",
-            },
-            {
-              photo: "panda_aifu_03",
-              name: "아이바오와 푸바오",
-              title: "아이바오와 푸바오 2",
-              description:
-                "푸바오를 소중하게 꼭 안고있는 아이바오",
-            },
-            {
-              photo: "panda_aifu_04",
-              name: "아이바오와 푸바오",
-              title: "아이바오와 푸바오 2",
-              description:
-                "큰 엄마 삼각김밥과 작은 아기 삼각김밥",
-            },
-          ],
-        },
-        {
-          items: [
-            {
-              photo: "panda_twins_00",
-              name: "쌍둥이 동생판다",
-              title: "쌍둥이 동생판다 1",
-              description:
-                "2023년 7월 7일 쌍둥이 공주님 판다가 태어났어요!!",
-            },
-            {
-              photo: "panda_twins_01",
-              name: "쌍둥이 동생판다",
-              title: "쌍둥이 동생판다 2",
-              description:
-                "판다티가 나는 쌍둥이 바오들",
-            },       
-            {
-              photo: "panda_twins_02",
-              name: "쌍둥이 동생판다",
-              title: "쌍둥이 동생판다 3",
-              description:
-                "쑥쑥 자라고 있는 푸바오의 쌍둥이 동생들 똔똔해요!!",
-            },           
-          ],
-        },
-        {
-          items: [
-            {
-              photo: "panda_ks_00",
-              name: "판다 할아버지들 강바오와 송바오",
-              title: "판다 할아버지들 강바오와 송바오 1",
-              description:
-                "판다 할아버지들 강바오와 송바오와 함께해서 행복한 푸바오",
-            },
-            {
-              photo: "panda_ks_01",
-              name: "판다 할아버지들 강바오와 송바오",
-              title: "판다 할아버지들 강바오와 송바오 2",
-              description:
-                "할아버지 손 잡고 찰칵!",
-            },
-            {
-              photo: "panda_ks_02",
-              name: "판다 할아버지들 강바오와 송바오",
-              title: "판다 할아버지들 강바오와 송바오 3",
-              description:
-                "송바오 할아버지의 볼하트",
-            },
-            {
-              photo: "panda_ks_03",
-              name: "판다 할아버지들 강바오와 송바오",
-              title: "판다 할아버지들 강바오와 송바오 4",
-              description:
-                "강바오 할아버지와 스마트폰",
-            },
-          ],
-        },
       ],
       interests: [
         { image: "interest_00", title: "햄버거" },
         { image: "interest_01", title: "샌드위치" },
         { image: "interest_02", title: "타코" },
         { image: "interest_03", title: "핫도그" },
-        { image: "interest_04", title: "조각피자" },
+        { image: "interest_04", title: "치킨" },
         { image: "interest_05", title: "피자" },
       ],
     };
