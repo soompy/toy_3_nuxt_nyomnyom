@@ -13,7 +13,7 @@
       <router-link to="/mypage/pageMypage">마이페이지</router-link>
 
       <router-link to="/search/searchPage">검색</router-link>
-      <router-link to="/media/mediaContents">미디어 콘텐츠</router-link>
+      <router-link to="/media/mediaContents">쿡 스토리</router-link>
       <router-link to="/">위젯</router-link>
       <router-link to="/">대시보드</router-link>
     </div>

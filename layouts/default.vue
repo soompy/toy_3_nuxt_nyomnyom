@@ -19,7 +19,7 @@ export default {
     pageTitle() {
       switch (this.$route.name) {
         case "media-mediaContents":
-          return "미디어 콘텐츠";
+          return "쿡 스토리";
         case "community-mainCommunity":
           return "커뮤니티";
         case "join-join":

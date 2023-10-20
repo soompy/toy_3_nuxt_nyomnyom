@@ -13,7 +13,7 @@
     </section>
 
     <ButtonCp
-      class="btn type-line primary w-60 d-flex items-center justify-content-center mb-10 mx-auto"
+      class="btn type-line primary flex w-60 d-flex items-center justify-center mb-10 mx-auto"
       label="뇸뇸 수플레 예약하기"
       :height="46"
       textColor="black"
@@ -27,7 +27,7 @@
             <p class="mb-4">방문일자를 선택해주세요!</p>  
             <date-picker></date-picker>     
             <ButtonCp
-              class="btn primary pl-4 pr-4 flex items-center mt-2 m-auto"
+              class="btn primary pl-4 pr-4 flex items-center mt-4 m-auto"
               label="뇸뇸 수플레 예약하기"
               :height="40"
               textColor="white"
@@ -77,19 +77,19 @@ export default {
       popupOn: false,
       showCalendar: false,
       thumbs: [
-        { image: "panda_ai_00", title: "1번", text: "사랑이" },
-        { image: "panda_ai_01", title: "2번", text: "아이바오" },
-        { image: "panda_ai_02", title: "3번", text: "엄마판다" },
-        { image: "panda_aifu_00", title: "4번", text: "행복이와" },
-        { image: "panda_aifu_01", title: "5번", text: "아기와 엄마" },
-        { image: "panda_aifu_02", title: "6번", text: "아기판다" },
-        { image: "panda_aifu_03", title: "6번", text: "딸 푸바오" },
-        { image: "panda_aifu_04", title: "6번", text: "판다모녀" },
-        { image: "panda_fu_00", title: "6번", text: "행복이" },
-        { image: "panda_fu_01", title: "6번", text: "푸" },
-        { image: "panda_le_00", title: "6번", text: "기쁨이" },
-        { image: "panda_le_01", title: "6번", text: "러바오" },
-        { image: "panda_le_02", title: "6번", text: "아빠판다" },
+        { image: "burger_00", title: "1번", text: "빅맥" },
+        { image: "burger_01", title: "2번", text: "더블 쿼터파운더 치즈" },
+        { image: "burger_02", title: "3번", text: "맥스파이시 상하이 버거" },
+        { image: "pizza_00", title: "4번", text: "씨푸드킹" },
+        { image: "pizza_01", title: "5번", text: "립스테이크" },
+        { image: "pizza_02", title: "6번", text: "토핑킹" },
+        { image: "hotdog_00", title: "6번", text: "감자핫도그" },
+        { image: "hotdog_01", title: "6번", text: "모짜체다 핫도그" },
+        { image: "chicken_00", title: "6번", text: "켄터키통다리순살치킨 5조각" },
+        { image: "chicken_01", title: "6번", text: "갓양념치킨 5조각" },
+        { image: "taco_00", title: "6번", text: "쉬림프 타코" },
+        { image: "taco_01", title: "6번", text: "치즈 나초" },
+        { image: "taco_02", title: "6번", text: "빅벨박스" },
       ],
     };
   },

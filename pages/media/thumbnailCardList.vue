@@ -4,7 +4,7 @@
       <a href="">
         <span class="thumbnail"
           ><img
-            :src="require(`../../assets/images/panda/${thumb.image}.webp`)"
+            :src="require(`../../assets/images/food/${thumb.image}.png`)"
             :alt="thumb.title"
         /></span>
         <p>{{ thumb.text }}</p>

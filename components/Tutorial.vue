@@ -6,8 +6,8 @@
     <section class="media-play">
       <div class="top-box">
         <p>
-          1초도 놓칠 수 없바옹 <br>
-          오늘은 또 어떤 귀여운 바오가!!
+          퐁실한 수플레 만들기! <br>
+          성공방법 노하우 클래스
         </p>
       </div>
       <div class="best-play-container">
@@ -51,7 +51,7 @@ export default {
   name: "NuxtTutorial",
   data() {
     return {
-      videoId: "KRDH7IJ-P14?si=7yNa1BkltIaBIdTU&amp",
+      videoId: "3bZM8eux_ro?si=QkAaGJmHgKzb48xw",
       customListItems: [
         {
           title: "세계에서 패티가 제일 두꺼운 햄버거 도전하기",

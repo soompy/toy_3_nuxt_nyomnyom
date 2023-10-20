@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     youtubeVideoSrc() {
-      return `https://www.youtube.com/embed/${this.videoId}?autoplay=1&mute=1&controls=0`;
+      return `https://www.youtube.com/embed/${this.videoId}?autoplay=1&mute=1&controls=0`;      
     },
   },
 };

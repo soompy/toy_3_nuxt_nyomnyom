@@ -2,15 +2,15 @@
   <section class="media-play">
     <div class="top-box">
       <p>
-        1초도 놓칠 수 없바옹 <br>
-        오늘은 또 어떤 귀여운 바오가!!
+        퐁실한 수플레 만들기! <br>
+        성공방법 노하우 클래스
       </p>
     </div>
     <div class="best-play-container">
       <div class="best-play-box">
         <YoutubeFrame :video-id="videoId" />
       </div>
-      <button class="btn secondary type-line w-50 h-10 mt-3 m-auto">더보기</button>
+      <button class="btn secondary type-line w-50 h-10 mt-3 m-auto">더보기</button>      
     </div>
   </section>
 </template>
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-        videoId: "KRDH7IJ-P14?si=7yNa1BkltIaBIdTU&amp",
+        videoId: "3bZM8eux_ro?si=QkAaGJmHgKzb48xw",
     }
   },  
 };

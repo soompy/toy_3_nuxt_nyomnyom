@@ -16,12 +16,12 @@
         align-items: center;
         margin-top: 1.3rem;
         margin-left: auto;
-        background: $color-grey-4;
-        color: $color-white;
+        background: $pointer-color;
+        color: $color-grey-4;
         border-radius: 0.4rem;
         &.disabled {
-            background: $color-light-grey-4;
-            color: $color-grey-4;
+            background: $color-light-grey-5;
+            color: $color-white;
             border: none;
         }
     }
@@ -38,11 +38,11 @@
     }
 
     &.confirm {
-        background: $secondary-color;
+        background: $pointer-color;
     }
 
     &.cancel {
-        background: $color-grey-1;
+        background: $color-light-grey-1;
     }
 
     &.primary {
