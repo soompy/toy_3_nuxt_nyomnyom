@@ -9,8 +9,7 @@
     <div class="best-play-container">
       <div class="best-play-box">
         <YoutubeFrame :video-id="videoId" />
-      </div>
-      <button class="btn secondary type-line w-50 h-10 mt-3 m-auto">더보기</button>      
+      </div>      
     </div>
   </section>
 </template>

@@ -96,6 +96,7 @@ export default {
     padding: 1.2rem 0.6rem 1.2rem 1.2rem;
     > div {      
       font-size: 0.85rem;
+      line-height: 1.2rem;
     }
   }
 }

@@ -47,7 +47,7 @@ export default {
         width: 100%;
         height: 4rem;
         border-radius: 50%;
-        background: #eeeeee;
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,0) 100%);
       }
       p {
         font-size: 0.8rem;

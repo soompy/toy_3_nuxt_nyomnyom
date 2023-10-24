@@ -42,23 +42,36 @@ export default {
       width: 70%;
       height: 50vh;
       margin-right: 1rem;
-      border: 1px solid #cccccc;
+      border: 1px solid #ece9e9;
       border-radius: 16px;
       .slide-picture {
         display: block;
+        position: relative;
         height: 70%;
         img {
-          object-fit: contain;
+          object-fit: contain;          
+        }
+        &:after {
+            display: block;
+            clear: both;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;            
+            width: 100%;
+            height: 2px;
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,0) 100%);
         }
       }
       .slide-text {
         display: block;
         padding: 1rem 1.15rem;
-        border-top: 1px solid #cccccc;
         strong {
           display: block;
-          font-size: 0.9rem;
+          font-size: 1rem;
           font-family: "Caprasimo", cursive;
+          text-align: center;
+          margin-bottom: 0.6rem;
         }
         span {
           font-size: 0.9rem;

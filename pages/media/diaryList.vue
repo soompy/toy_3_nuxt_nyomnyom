@@ -72,7 +72,7 @@ export default {
 <style lang="scss" scoped>
 .diary-item {
   position: relative;  
-  border-bottom: 1px solid #E2E2E2;    
+  border-bottom: 1px solid #cccccc;    
   padding: 1.4rem 0;
   .thumbnail-image {
     overflow: hidden;
