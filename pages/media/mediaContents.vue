@@ -17,44 +17,43 @@
       label="뇸뇸 수플레 예약하기"
       :height="46"
       textColor="black"
-      @click="openPopup"
+      @click="openModal"
     />
 
     <section class="bottomPopup-wrapper" v-if="popupOn">
       <BottomPopup @close="closePopup">
         <div class="popup-inner">
-          <div v-if="showCalendar">
-            <p class="mb-4">방문일자를 선택해주세요!</p>  
-            <date-picker></date-picker>     
+          <div>
+            <p class="mb-4">뇸뇸 수플레를 예약하시겠습니까?</p>            
             <ButtonCp
               class="btn primary pl-4 pr-4 flex items-center mt-4 m-auto"
-              label="뇸뇸 수플레 예약하기"
+              label="네 예약합니다."
               :height="40"
               textColor="white"
-              @click="openPopup"
+              @click="confirmReservationBtn"
             />           
-          </div>
-          <div v-else>                        
-            <div class="food-text">
-              <p>가장 맛있는 뇸뇸 수플레 <br />먹으러 가기!</p>
-              <ButtonCp
-                class="btn primary pl-4 pr-4 mt-8 flex items-center m-auto"
-                label="신청 캘린더 보기"
-                :height="40"
-                textColor="white"
-                @click="showCalendar = true"
-              />            
-            </div>            
-          </div>
+          </div>         
         </div>
       </BottomPopup>
     </section>
+
+    <Modal v-if="showReservation" @close="closeDim">
+      <div class="confetti-container">       
+        <div class="confetti-piece">
+          <strong>            
+            예약완료!!
+          </strong>
+          <ConfettiEffect :animationData="animationData" width="200px" height="200px" />          
+        </div>
+      </div>
+    </Modal>    
   </div>
 </template>
 
 <script>
+import Modal from "../../components/Modal.vue";
 import ButtonCp from "../../components/button/ButtonCp.vue";
-import DatePicker from '../../components/widgets/datePicker.vue';
+import ConfettiEffect from "../../components/lottie/ConfettiEffect.vue";
 import DiaryList from "./diaryList.vue";
 import MediaPlayer from './mediaPlayer.vue';
 import ThumbnailCardList from "./thumbnailCardList.vue";
@@ -65,17 +64,17 @@ export default {
     ButtonCp,
     DiaryList,
     ThumbnailCardList,
-    DatePicker,
     MediaPlayer,
-  },
+    Modal,
+    ConfettiEffect,    
+},
   mounted() {
     console.log(this.$route.name);
   },
 
   data() {
     return {
-      popupOn: false,
-      showCalendar: false,
+      popupOn: false,            
       thumbs: [
         { image: "burger_00", title: "1번", text: "빅맥" },
         { image: "burger_01", title: "2번", text: "더블 쿼터파운더 치즈" },
@@ -91,16 +90,37 @@ export default {
         { image: "taco_01", title: "6번", text: "치즈 나초" },
         { image: "taco_02", title: "6번", text: "빅벨박스" },
       ],
+      showReservation: false,
+      animationData: require('../../assets/images/effect/confetti.json'),
     };
   },
   methods: {
     openPopup() {
-      this.popupOn = true;
+      this.popupOn = true;   
+    },     
+
+    confirmReservationBtn() {      
+      this.showReservation = true;
+      this.popupOn = false;    
+
+      setTimeout(() => {
+        this.closeDim();
+        this.showReservation = false;
+      }, 3000);
     },
     closePopup() {
       this.popupOn = false;
-      this.showCalendar = false;
     },
+    openModal() {
+      this.popupOn = true;
+    },
+    openReservation() {
+      this.popupOn = false;
+      this.openModal = true;
+    },
+    closeDim() {
+      this.showReservation = false;
+    }
   },
 };
 </script>
