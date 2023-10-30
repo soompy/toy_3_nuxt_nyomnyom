@@ -13,7 +13,7 @@
     </section>
 
     <ButtonCp
-      class="btn type-line primary flex w-60 d-flex items-center justify-center mb-10 mx-auto"
+      class="btn type-line primary flex w-60 d-flex items-center justify-center mb-5 mx-auto"
       label="뇸뇸 수플레 예약하기"
       :height="46"
       textColor="black"
