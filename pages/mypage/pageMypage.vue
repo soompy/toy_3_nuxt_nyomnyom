@@ -37,10 +37,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.user-box {
-  display: flex;
-  align-content: center;
-  position: relative;
-  width: 100%;
-}
+
 </style>

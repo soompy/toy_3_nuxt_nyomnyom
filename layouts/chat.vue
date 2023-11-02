@@ -52,7 +52,7 @@ export default {
   height: 80vh;
   .message {
     margin: 26px 0;
-    padding: 8px 12px;
+    padding: 1rem;
     border-radius: 14px;
   }
 }
@@ -64,7 +64,7 @@ export default {
   &:after {
     position: absolute;
     right: 6%;
-    top: 100%;
+    top: 90%;
     display: block;
     clear: both;
     content: '';

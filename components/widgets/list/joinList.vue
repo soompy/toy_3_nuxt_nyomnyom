@@ -365,8 +365,8 @@ export default {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 50vw;
-        height: 50vw;        
+        width: 12rem;
+        height: 12rem;
         content: '마감';
         font-size: 2rem;
         font-weight: bold;

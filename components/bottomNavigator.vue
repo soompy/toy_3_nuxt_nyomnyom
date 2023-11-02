@@ -33,7 +33,6 @@
 <script>
 export default {
   name: "BottomNavigator",
-
 };
 </script>
 
@@ -43,9 +42,8 @@ export default {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 3.8rem;
-  background: #ffffff;  
-  box-shadow: 0.12rem 0 0.2rem 0.3rem rgba(0, 0, 0, 0.03);
+  height: 3.8rem;  
+  box-shadow: 0.12rem 0 0.2rem 0.3rem rgba(0, 0, 0, 0.05);
   .navigator {
     display: flex;
     align-items: center;
@@ -86,7 +84,7 @@ export default {
           width: 0.6rem;
           height: 0.6rem;
           border-radius: 50%;
-          background: #EA4AAA;
+          background: #e05c2e;
         }
         &.active {
           &:after {

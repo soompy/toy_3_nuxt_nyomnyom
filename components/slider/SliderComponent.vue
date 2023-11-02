@@ -28,21 +28,23 @@ export default {
 
 <style lang="scss" scoped>
 .slider-wrapper {
-  overflow-x: auto;
+  position: relative;  
   width: 100%;
-  padding: 1rem;
-  
   .slider-box {
-    display: flex;
-    align-content: center;
-    width: 100%;
+    overflow-x: auto;
+    display: flex;        
+    padding: 20px;
     .slide-item {
       overflow: hidden;
       flex-shrink: 0;  
       width: 70%;
       height: 50vh;
-      margin-right: 1rem;
-      border: 1px solid #ece9e9;
+      margin-right: 20px;      
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6.7px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 16px;
       .slide-picture {
         display: block;
@@ -83,6 +85,10 @@ export default {
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
+      }
+
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

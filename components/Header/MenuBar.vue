@@ -8,15 +8,27 @@
     <div v-if="menuOpen" class="menu">
       <button class="btn-close w-5 h-5" @click="closeMenu">
         <i class="icon ic_close black"></i>
-      </button>
-      <router-link to="/login/registerMembers">회원가입</router-link>
-      <router-link to="/login/loginPage">로그인</router-link>
-      <router-link to="/community/mainCommunity">커뮤니티</router-link>
-      <router-link to="/join/join">조인</router-link>
-      <router-link to="/mypage/pageMypage">마이페이지</router-link>      
-      <router-link to="/media/mediaContents">쿡 스토리</router-link>
-      <router-link to="/">위젯</router-link>
-      <router-link to="/">대시보드</router-link>
+      </button>    
+      
+      <div class="user-box">
+        <router-link to="/login/loginPage">로그인</router-link>
+        <router-link to="/login/registerMembers">회원가입</router-link>        
+      </div>  
+      
+      <ul class="gnb">
+        <li>
+          <router-link to="/community/mainCommunity">커뮤니티</router-link>          
+        </li>
+        <li>
+          <router-link to="/join/join">조인</router-link>          
+        </li>
+        <li>
+          <router-link to="/media/mediaContents">쿡 스토리</router-link>              
+        </li>
+        <li>
+          <router-link to="/mypage/pageMypage">마이페이지</router-link>            
+        </li>          
+      </ul>                
     </div>
   </div>
 </template>

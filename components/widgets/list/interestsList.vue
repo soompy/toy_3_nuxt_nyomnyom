@@ -42,13 +42,13 @@ export default {
   overflow-x: auto;
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: 0 20px 0 10px;
   .interests-item {
     display: flex;
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 0.3rem;
+    margin-right: 0.8rem;
     .image {
       overflow: hidden;
       display: block;
@@ -61,9 +61,9 @@ export default {
       text-align: center;
       letter-spacing: -0.06rem;
       margin: 0.24rem 0 0 0;
-    }
-    &:nth-of-type(1) {
-      margin-left: 0;
+    }    
+    &:last-child {
+      margin-right: 0;
     }
   }  
 }

@@ -50,24 +50,38 @@ export default {
     .post-card-item {
       overflow: hidden;    
       min-width: 80%;
-      margin-right: 1rem;
-      box-shadow: 0 0.12rem 0.3rem rgba(0, 0, 0, .05);
-      border: 0.06rem solid rgba(0, 0, 0, .05);
-      border-radius: 0.6rem;
+      padding-right: 20px;
+      padding-bottom: 2rem;
       .image-wrapper {
+        overflow: hidden;
         display: block;
-        position: relative;
-        object-fit: contain;             
+        position: relative;        
+        height: 16rem;
+        border-radius: 1rem;     
+        background: #00000010;   
+        border: 1px solid #eeeeee;     
       }
       .post-text-box {
+        position: relative;
+        z-index: 1;
+        object-fit: contain;
+        background: rgba(255, 255, 255, 0.15);        
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.7px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
         padding: 1rem;
+        margin-top: -2rem;
+        margin: -2rem 1rem 0;
+        border-radius: 1rem;
         .post-title {
           font-size: 1rem;
+          line-height: 1.4rem;
           font-weight: bold;
           margin-bottom: 0.6rem;
         }
         .post-text {
           font-size: 0.9rem;
+          line-height: 1.3rem;
           font-weight: 500;
           margin: 0;
         }

@@ -3,8 +3,7 @@
     <SliderTab />
 
     <button class="btn chat" @click="openChat">
-      뇸뇸톡 <br />
-      시작
+      뇸뇸톡 시작
     </button>
 
     <section class="chat-wrapper" v-if="showChat">
@@ -35,12 +34,7 @@ export default {
   data() {
     return {
       showChat: false,
-      customListItems: [
-        {
-          title: "세계에서 패티가 제일 두꺼운 햄버거 도전하기",
-          text: "패티에 진심인, 햄버거를 좋아하는 사람들은 여기로 모이세요!!",
-          image: "photo_1_11zon.png",
-        },
+      customListItems: [        
         {
           title: "금가루 시즈닝이 뿌려진 감자튀김 도전하기",
           text: "색다른 감자튀김을 좋아하는 사람들은 여기로 모이세요!!",
@@ -48,8 +42,13 @@ export default {
         },
         {
           title: "마라맛 치킨 도전하기",
-          text: "마라소스와 치킨 좋아하는 사람들은 여기로 모이세요!!",
+          text: "마라의 맛과 치킨 좋아하는 사람들은 여기로 모이세요!!",
           image: "photo_3_2_11zon.png",
+        },
+        {
+          title: "피자, 햄버거, 핫도그에 어울리는 소스는?",
+          text: "이 조합 나만 알고 있긴 아깝다! 최상의 맛을 찾는 사람들",
+          image: "photo_4_3_11zon.png",
         },
       ],
       messages: [],
@@ -79,13 +78,12 @@ export default {
   position: fixed;
   bottom: 5rem;
   right: 20px;
-  z-index: 1;
-  width: 4rem;
-  height: 4rem;
+  z-index: 5;  
   font-size: 0.8rem;
   line-height: 1.4;
   font-weight: bold;
-  border-radius: 50%;
+  border-radius: 1rem;
+  padding: 0.5rem 0.8rem;
 }
 
 .chat-wrapper {
