@@ -156,21 +156,7 @@ export default {
       const daysRemaining = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
       return daysRemaining;
-    },
-    timeRemaining() {
-      if (!this.modalData || !this.modalData.date) {
-        return '';
-      }
-
-      const eventDate = new Date(this.modalData.date);
-      const currentDate = new Date();
-      const timeDiff = eventDate - currentDate;
-
-      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));      
-
-      return `${days}일 ${hours}시간`;
-    },
+    },    
   },
   watch: {
     modalData: {
@@ -219,6 +205,9 @@ export default {
       
       return `${days}일 ${hours}시간`;
     },
+    getTimeRemaining() {      
+      return `${days}일 ${hours}시간`;
+    },
     openModal(joinItem) {
       this.showModal = true;
       this.modalData = joinItem;
@@ -240,6 +229,20 @@ export default {
           this.closeDim();
         }, 3000);
       }
+    },
+    timeRemaining() {
+      if (!this.modalData || !this.modalData.date) {
+        return '';
+      }
+
+      const eventDate = new Date(this.modalData.date);
+      const currentDate = new Date();
+      const timeDiff = eventDate - currentDate;
+
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));      
+
+      return `${days}일 ${hours}시간`;
     },
     calculateTimeRemaining() {
       const eventDate = new Date(this.modalData.date);
