@@ -49,7 +49,7 @@ export default {
 .chat-window {
   overflow-y: scroll;
   padding: 20px;
-  height: 80vh;
+  height: calc(100vh - 172px);
   .message {
     margin: 26px 0;
     padding: 1rem;
@@ -76,7 +76,7 @@ export default {
 .chat-typing {
   display: flex;
   align-content: center;
-  height: calc(20vh - 40px);
+  height: 100px;
   .chat-input {
     width: 80%;
     height: 100%;    

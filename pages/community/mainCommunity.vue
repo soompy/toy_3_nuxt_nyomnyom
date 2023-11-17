@@ -1,10 +1,6 @@
 <template>
   <div class="community-wrapper">
-    <SliderTab />
-
-    <button class="btn chat" @click="openChat">
-      뇸뇸톡 시작
-    </button>
+    <SliderTab />    
 
     <section class="chat-wrapper" v-if="showChat">
       <button class="btn back w-10 h-10" @click="closeChat">
@@ -16,6 +12,10 @@
     <div class="food-community">
       <PostListCard :listItems="customListItems" />
     </div>
+
+    <button class="btn chat" @click="openChat" v-if="!showChat">
+      뇸뇸톡 시작
+    </button>
   </div>
 </template>
 
@@ -75,10 +75,10 @@ export default {
 }
 
 .btn.chat {
-  position: fixed;
-  bottom: 5rem;
-  right: 20px;
-  z-index: 5;  
+  position: sticky;
+  bottom: 1rem;
+  left: calc(100vw - 110px);
+  z-index: 1;  
   font-size: 0.8rem;
   line-height: 1.4;
   font-weight: bold;
@@ -109,7 +109,7 @@ export default {
 
   .chat-box {
     position: relative;
-    top: 40px;
+    top: 72px;
     left: 0;
     width: 100%;
   }

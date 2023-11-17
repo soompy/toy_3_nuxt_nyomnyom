@@ -39,7 +39,7 @@ export default {
   overflow-x: auto;
   position: relative;
   width: 100%;
-  padding: 20px;
+  padding-top: 20px;
   .post-card-list {
     display: flex;
     align-content: center;
@@ -63,7 +63,6 @@ export default {
       }
       .post-text-box {
         position: relative;
-        z-index: 1;
         object-fit: contain;
         background: rgba(255, 255, 255, 0.15);        
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
