@@ -1,6 +1,8 @@
-# nyomnyom
+# Nuxt로 구현한 뇸뇸 그라운드 개인 토이프로젝트
 
 ## Build Setup
+
+노드버전 v20.9.0
 
 ```bash
 # install dependencies
